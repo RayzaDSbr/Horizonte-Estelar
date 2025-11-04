@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Megrim&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* FONTES */
+.megrim-regular {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+  position: absolute;           /* Fica sobre a imagem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(20, 28, 56, 0.746); 
+  box-shadow: 8px 2px 11px 1px rgb(62 75 133);
+  z-index: 10;                 
+}
+
+li{
+ list-style: none;
+}
+
+a {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  color: aliceblue;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+  padding: 20px;
+}
+
+a:hover {
+  color: rgb(62 75 133);
+
+}
+
+/* HOME */
+.img_fundo {
+  min-height: 140vh;
+  background-image: url("img/fundo_home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* TEXTOS */
+p.titulo {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-size: 80px;
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p.subtitulo {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-size: 40px;
+  color: aliceblue;
+  text-align: center;
+}
+
+/*CONTEUDOS HOME*/
+div.conteudo{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.conteudo.f{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/fundo_conteudo2.png);
+}
+p.texto{
+  color: aliceblue;
+  font-family: "Urbanist", sans-serif;
+  padding: 90px;
+}
