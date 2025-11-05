@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Home - HE</title>
+</head>
+
+<body>
+  <header>
+    <img src="" alt="">
+
+    <li><a href=""> Planetas </a> </li>
+    <li><a href=""> Dashboard </a> </li>
+    <li><a href=""> Game </a> </li>
+    <li><a href="login.html"> Login </a> </li>
+
+  </header>
+
+  <main>
+    <div class="img_fundo_login">
+
+
+      <div class="caixa login">
+
+        <p class="login">Entrar</p>
+
+        <p class="inputs"> Email: </p>
+        <input id="ipt_email">
+
+        <p class="inputs">Senha:</p>
+        <input id="ipt_senha">
+        <br>
+        <button onclick="login()">Entrar</button>
+
+        <p> Ainda não tem login? Faça seu <a onclick="cadastro_tela()">cadastro</a> agora mesmo</p>
+
+      </div>
+
+      <!-- saída -->
+
+
+      <div id="saida" class="caixa login">
+        <p class="login">Cadastro</p>
+
+        <p class="inputs"> Nome: </p>
+        <input id="ipt_email">
+
+        <p class="inputs"> Email: </p>
+        <input id="ipt_email">
+
+        <p class="inputs">Senha: </p>
+        <input id="ipt_senha">
+
+        <p class="inputs">Confirmação de Senha: </p>
+        <input id="ipt_senha">
+        <br>
+        <button> Cadastrar </button>
+      </div>
+    </div>
+
+    </div>
+  </main>
+
+  <footer></footer>
+</body>
+<script>
+  function cadastro_tela() {
+    let saida = document.getElementById("saida");
+    saida.classList.add("show");
+  }
+</script>
+
+</html>
