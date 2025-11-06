@@ -19,6 +19,8 @@ CREATE TABLE usuario (
 	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
 
+truncate usuario;
+
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
@@ -68,3 +70,16 @@ alter table usuario add column cpf varchar(15);
 
 select * from usuario;
 
+/*-------------------------------*/
+create database HorizonteEstelar;
+use HorizonteEstelar;
+
+create table usuario(
+id int primary key auto_increment,
+nome varchar(50),
+data_nasc date,
+email varchar(50),
+senha varchar(30)
+);
+
+select * from usuario;
