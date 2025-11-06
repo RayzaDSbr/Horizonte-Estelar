@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/sessao.js"></script>
+  <link rel="icon" href="./assets/icon/favicon2.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home - HE</title>
+</head>
+
+<body>
+  <header>
+    <img src="" alt="">
+
+    <li><a href=""> Planetas </a> </li>
+    <li><a href=""> Dashboard </a> </li>
+    <li><a href=""> Game </a> </li>
+    <li><a href="login.html"> Login </a> </li>
+
+  </header>
+
+  <main>
+    <div class="img_fundo_login">
+
+
+      <div class="caixa login">
+
+        <p class="login">Entrar</p>
+
+        <p class="inputs"> Email: </p>
+        <input id="email_input" type="text">
+
+        <p class="inputs">Senha:</p>
+        <input id="senha_input" type="password">
+        <br>
+
+        <div class="alerta_erro">
+          <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"> </span>
+          </div>
+        </div>
+
+         <div id="div_erros_login"> ooo </div>
+
+         <div id="div_aguardar" class="loading-div">
+          <img src="./assets/circle-loading.gif" id="loading-gif" />
+        </div>
+
+        <button onclick="entrar()">Entrar</button>
+
+        <p> Ainda não tem login? Faça seu <a onclick="cadastro_tela()">cadastro</a> agora mesmo</p>
+
+      </div>
+
+      <!-- saída -->
+
+
+      <div id="saida" class="caixa login">
+        <p class="login">Cadastro</p>
+
+        <p class="inputs"> Nome: </p>
+        <input id="nome_cad">
+
+        <p class="inputs"> Data de Nascimento: </p>
+        <input id="data_nasc_cad">
+
+        <p class="inputs"> Email: </p>
+        <input id="email_cad">
+
+        <p class="inputs"> Senha: </p>
+        <input id="senha_cad">
+
+        <p class="inputs"> Confirmação de Senha: </p>
+        <input id="confirmacao_cad">
+        <br>
+
+        <button onclick="cadastrar()"> Cadastrar </button>
+        
+      
+      </div>
+    </div>
+
+    </div>
+  </main>
+
+  <footer></footer>
+</body>
+<script>
+  function cadastro_tela() {
+    let saida = document.getElementById("saida");
+    saida.classList.add("show");
+  }
+
+  function entrar() {
+    aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+
+  // -------------------------- PARTE DO CADASTRO -------------------//
+
+  
+</script>
+
+</html>
