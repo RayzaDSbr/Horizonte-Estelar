@@ -83,3 +83,6 @@ senha varchar(30)
 );
 
 select * from usuario;
+
+
+

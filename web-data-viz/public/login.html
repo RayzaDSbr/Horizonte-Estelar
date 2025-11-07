@@ -27,7 +27,7 @@
 
       <div class="caixa login">
 
-        <p class="login">Entrar</p>
+        <p class="titulo login">Entrar</p>
 
         <p class="inputs"> Email: </p>
         <input id="email_input" type="text">
@@ -42,15 +42,15 @@
           </div>
         </div>
 
-         <div id="div_erros_login"> ooo </div>
+        <div id="div_erros_login"> ooo </div>
 
-         <div id="div_aguardar" class="loading-div">
+        <div id="div_aguardar" class="loading-div">
           <img src="./assets/circle-loading.gif" id="loading-gif" />
         </div>
 
-        <button onclick="entrar()">Entrar</button>
+        <button onclick="entrar()" class="botao">Entrar</button>
 
-        <p> Ainda não tem login? Faça seu <a onclick="cadastro_tela()">cadastro</a> agora mesmo</p>
+          <p class="msg">  Ainda não tem login? Faça seu <a onclick="cadastro_tela()"class="entrar">cadastro</a> </p>
 
       </div>
 
@@ -58,7 +58,7 @@
 
 
       <div id="saida" class="caixa login">
-        <p class="login">Cadastro</p>
+        <p class="titulo login">Cadastro</p>
 
         <p class="inputs"> Nome: </p>
         <input id="nome_cad">
@@ -76,14 +76,14 @@
         <input id="confirmacao_cad">
         <br>
 
-        <button onclick="cadastrar()"> Cadastrar </button>
-        
-         <div id="div_aguardar" class="loading-div">
+        <button onclick="cadastrar()" class="botao"> Cadastrar </button>
+
+        <div id="div_aguardar" class="loading-div">
           <img src="./assets/circle-loading.gif" id="loading-gif" />
         </div>
 
         <div id="div_erros_login"> ooo </div>
-      
+
       </div>
     </div>
 
@@ -101,77 +101,77 @@
   function entrar() {
     aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.DATA_NASC  = json.data_nasc;
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.SENHA_USUARIO = json.senha;
-                  
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
+    if (emailVar == "" || senhaVar == "") {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+      finalizarAguardar();
+      return false;
+    }
+    else {
+      setInterval(sumirMensagem, 5000)
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      })
+    }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
+
+      if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+          sessionStorage.ID_USUARIO = json.id;
+          sessionStorage.NOME_USUARIO = json.nome;
+          sessionStorage.DATA_NASC = json.data_nasc;
+          sessionStorage.EMAIL_USUARIO = json.email;
+          sessionStorage.SENHA_USUARIO = json.senha;
+
+          setTimeout(function () {
+            window.location = "./dashboard/cards.html";
+          }, 1000); // apenas para exibir o loading
+
+        });
+
+      } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+
+        resposta.text().then(texto => {
+          console.error(texto);
+          finalizarAguardar(texto);
+        });
+      }
+
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none"
+  }
 
 
   // -------------------------- PARTE DO CADASTRO -------------------//
 
-  
+
   // Array para armazenar empresas cadastradas para validação de código de ativação 
 
 
@@ -181,20 +181,20 @@
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeCad = nome_cad.value;
-    var data_nascCad = data_nasc_cad.value; 
+    var data_nascCad = data_nasc_cad.value;
     var emailCad = email_cad.value;
     var senhaCad = senha_cad.value;
     var confirmacaoCad = confirmacao_cad.value;
-    
+
 
     // Verificando se há algum campo em branco
     if (
-      nomeCad  == "" ||
-      data_nascCad== "" ||
+      nomeCad == "" ||
+      data_nascCad == "" ||
       emailCad == "" ||
       senhaCad == "" ||
       confirmacaoCad == ""
-     
+
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -220,8 +220,8 @@
         data_nascServer: data_nascCad,
         emailServer: emailCad,
         senhaServer: senhaCad,
-   
-      
+
+
       }),
     })
       .then(function (resposta) {
@@ -251,7 +251,7 @@
     return false;
   }
 
-    function listar() {
+  function listar() {
     fetch("/empresas/listar", {
       method: "GET",
     })
@@ -269,7 +269,7 @@
         console.log(`#ERRO: ${resposta}`);
       });
   }
-  
+
   function sumirMensagem() {
     cardErro.style.display = "none";
   }

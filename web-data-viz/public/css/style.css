@@ -103,6 +103,63 @@ p.texto{
 /* --------------------------- FIM HOME --------------------------------*/
 
 /* --------------------------- LOGIN --------------------------------*/
+
+.msg{
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  color: aliceblue;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+  padding: 20px;
+}
+
+.titulo.login{
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-size: 50px;
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 10px;
+}
+input{
+  width: 315px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 0.95rem;
+    transition: 0.9s;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 0 2px #8b79d9 inset;
+    background-color: #9a99f2;
+}
+.botao {
+    width: 100%;
+    padding: 12px;
+    margin: 0px 0px 20px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: #60308c;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #431259;
+    transform: scale(1.03);
+}
+
 .img_fundo_login {
   min-height: 140vh;
   background-image: url("img/fundo_home.jpg");
@@ -120,7 +177,7 @@ p.texto{
     .caixa.login {
       position: absolute;
       width: 349px;
-      height: 450px;
+      height: 475px;
       padding: 1.3%;
       border-radius: 5px;
       background-color: #10162dc1;
@@ -190,6 +247,7 @@ p.texto{
   color: aliceblue;
   font-family: "Urbanist", sans-serif;
   font-size: 21px;
+
 } 
 p.inputs{
   color: aliceblue;
