@@ -25,33 +25,32 @@
     <div class="img_fundo_login">
 
 
-      <div class="caixa login">
+      <div class="caixa login flex">
 
         <p class="titulo login">Entrar</p>
 
-        <p class="inputs"> Email: </p>
-        <input id="email_input" type="text">
-
-        <p class="inputs">Senha:</p>
-        <input id="senha_input" type="password">
-        <br>
-
-        <div class="alerta_erro">
-          <div class="card_erro" id="cardErro">
-            <span id="mensagem_erro"> </span>
+        <div class="centralizando">
+          <p class="inputs"> Email: </p>
+          <input id="email_input" type="text">
+          <p class="inputs">Senha:</p>
+          <input id="senha_input" type="password">
+          <br>
+          <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"> </span>
+            </div>
           </div>
+          <div id="div_erros_login"> ooo </div>
+          <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif" />
+          </div>
+          <button onclick="entrar()" class="botao">Entrar</button>
+
+          <p class="msg"> Ainda não tem login? </p>
+          <div onclick="cadastro_tela()" class="aparecer">Faça seu cadastro</div>
+
+
         </div>
-
-        <div id="div_erros_login"> ooo </div>
-
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div>
-
-        <button onclick="entrar()" class="botao">Entrar</button>
-
-          <p class="msg">  Ainda não tem login? Faça seu <a onclick="cadastro_tela()"class="entrar">cadastro</a> </p>
-
       </div>
 
       <!-- saída -->
