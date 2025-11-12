@@ -2,11 +2,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Megrim&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ---------------------- CONTEUDO DOS PLANETAS -----------------*/
+.planetas_flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
+.icones_flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.caixa_planetas{
+  width:500px;
+  height: 500px;
+  background-color: #F09C23;
+  margin: 30px;
+}
+
+.planetas_icones{
+  margin: 10px 20px;
+}
+/* ---------------------- FIM DO CONTEUDO DOS PLANETAS -----------------*/
 body {
   margin: 0;
   padding: 0;
-   font-family: "Megrim", system-ui;
+  font-family: "Megrim", system-ui;
 }
 
 .label-captura {
@@ -17,8 +39,8 @@ body {
 .dash-right .avisos {
   width: 100%;
   color: rgb(216, 216, 216);
-    font-family: "Megrim", system-ui;
-  
+  font-family: "Megrim", system-ui;
+
 }
 
 .dash-right .avisos .container {
@@ -53,7 +75,7 @@ body {
 
 .dash-right .avisos .div-form button {
   cursor: pointer;
-    font-family: "Megrim", system-ui;
+  font-family: "Megrim", system-ui;
   border: 0;
   border-radius: 5px;
   font-size: 18px;
@@ -121,8 +143,8 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-      background-image: url(img/fundo_dash.png);
-    background-repeat: no-repeat;
+  background-image: url(img/fundo_dash.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -285,7 +307,7 @@ body {
 }
 
 .btn-chart {
-   font-family: "Megrim", system-ui;
+  font-family: "Megrim", system-ui;
   border: 0;
 
   font-size: 18px;
@@ -353,8 +375,8 @@ canvas {
   justify-content: space-evenly;
   align-items: center;
   border-right: 1px solid #f9fbfb;
-    background-image: url(img/fundo_dash.png);
-    background-repeat: no-repeat;
+  background-image: url(img/fundo_dash.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -390,7 +412,7 @@ canvas {
 }
 
 .hello h3 span {
- font-weight: 600;
+  font-weight: 600;
 }
 
 .btn-nav {
@@ -413,7 +435,7 @@ canvas {
   margin: 10px;
 }
 
-.btn-nav-white:hover{
+.btn-nav-white:hover {
   background-color: #3e57bb;
   box-shadow: -15px 17px 20px 0px rgb(6 17 64);
 }
@@ -449,7 +471,7 @@ canvas {
   box-shadow: 2px 5px 14px 2px #2f2f44;
 }
 
-.btn-logout:hover{
-  background-color:#f7f7f7;
+.btn-logout:hover {
+  background-color: #f7f7f7;
   box-shadow: 2px 5px 14px 2px rgb(17, 17, 91);
 }
