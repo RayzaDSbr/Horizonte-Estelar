@@ -413,6 +413,11 @@ canvas {
   margin: 10px;
 }
 
+.btn-nav-white:hover{
+  background-color: #3e57bb;
+  box-shadow: -15px 17px 20px 0px rgb(6 17 64);
+}
+
 .btn-nav-white h3 {
   color: #ededed;
   font-weight: 400;
@@ -442,4 +447,9 @@ canvas {
   cursor: pointer;
   border: 0.5px solid white;
   box-shadow: 2px 5px 14px 2px #2f2f44;
+}
+
+.btn-logout:hover{
+  background-color:#f7f7f7;
+  box-shadow: 2px 5px 14px 2px rgb(17, 17, 91);
 }
