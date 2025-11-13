@@ -61,19 +61,24 @@
             </div>
 
         </div>
-        <!-- Conteudo dos planetas -->
+       
         <div class="dash">
+            <!-- Conteudo dos planetas -->
             <div class="planetas_flex">
 
                 <div class="icones_flex">
                     <img src="../css/img/planetas/mercurio.png" class="planetas_icones" alt="Icone do planeta Mercurio"
-                        style="width: 39px;"  id="quadrado">
+                        style="width: 39px;"  id="botao_mercurio" onclick="exibir_planetas_mercurio()">
+
                     <img src="../css/img/planetas/venus.png" class="planetas_icones" alt="Icone do planeta Venus"
                         style="width: 43px;">
+
                     <img src="../css/img/planetas/planeta-terra.png" class="planetas_icones"
                         alt="Icone do planeta-terra" style="width: 45px;">
+
                     <img src="../css/img/planetas/marte.png" class="planetas_icones" alt="Icone do planeta Marte"
                         style="width: 33px;">
+
                     <img src="../css/img/planetas/jupiter.png" class="planetas_icones" alt="Icone do planeta Jupiter"
                         style="width: 65px;">
 
@@ -87,11 +92,48 @@
                     <img src="../css/img/planetas/netuno.png" class="planetas_icones" alt="Icone do planeta Netuno"
                         style="width: 50px;">
                 </div>
+                <!--Conteudo mercurio -->
+                <div class="caixa_planetas" id="caixa_mercurio">
+                    <div>
+                        <p class="nomes">Mercurio</p>
 
+                        <img src="../css/img/planetas/mercurio.gif" alt="gif mercurio" class="gif_planetas">
 
+                        <div>
+                            <li><b>Tipo:</b> Planeta gasoso</li>
+                            <li><b>Temperatura média:</b> cerca de -140 °C</li>
+                            <li><b>Composição predominante:</b> Hidrogênio, hélio e gelo</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <p class="infos">
+                            Saturno é famoso por seu sistema de anéis, formados por bilhões de partículas de gelo e
+                            rocha que
+                            refletem a luz do Sol, criando um espetáculo visual único. Ele é o segundo maior planeta do
+                            Sistema
+                            Solar e, assim como Júpiter, é composto principalmente por hidrogênio e hélio.
+                        </p>
+                        <p class="infos">
+                            Apesar do tamanho, Saturno é o planeta menos denso, se existisse um oceano grande o
+                            bastante, ele
+                            flutuaria. Seus ventos podem ultrapassar 1.800 km/h, e sua atmosfera apresenta faixas de
+                            nuvens em
+                            tons suaves de amarelo e dourado.
+                        </p>
+                        <p class="infos">
+
+                            Entre suas mais de 80 luas, destaca-se Titã, que possui uma atmosfera densa e lagos de
+                            metano
+                            líquido, sendo um dos lugares mais promissores para o estudo da vida fora da Terra.
+                        </p>
+
+                    </div>
+                </div>
+                <!--Conteudo saturno -->
                 <div class="caixa_planetas" id="caixa">
-
-
                     <div>
                         <p class="nomes">Saturno</p>
 
@@ -131,7 +173,7 @@
                         </p>
 
                     </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -152,7 +194,19 @@
                 caixa.style.display = 'none';
             }
         });
+    }
+/*Mercurio*/
+    function exibir_planetas_mercurio() {
+        const botao_mercurio = document.getElementById('botao_mercurio');
+        const caixa_mercurio = document.getElementById('caixa_mercurio');
 
+        botao_mercurio.addEventListener('click', function () {
+            if (caixa_mercurio.style.display === 'none' || caixa_mercurio.style.display === '') {
+                caixa_mercurio.style.display = 'flex';
+            } else {
+                caixa_mercurio.style.display = 'none';
+            }
+        });
     }
 </script>
 <!--<script>
