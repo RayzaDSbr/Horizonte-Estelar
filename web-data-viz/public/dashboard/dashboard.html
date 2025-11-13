@@ -67,7 +67,7 @@
 
                 <div class="icones_flex">
                     <img src="../css/img/planetas/mercurio.png" class="planetas_icones" alt="Icone do planeta Mercurio"
-                        style="width: 39px;">
+                        style="width: 39px;"  id="quadrado">
                     <img src="../css/img/planetas/venus.png" class="planetas_icones" alt="Icone do planeta Venus"
                         style="width: 43px;">
                     <img src="../css/img/planetas/planeta-terra.png" class="planetas_icones"
@@ -76,8 +76,12 @@
                         style="width: 33px;">
                     <img src="../css/img/planetas/jupiter.png" class="planetas_icones" alt="Icone do planeta Jupiter"
                         style="width: 65px;">
-                    <img src="../css/img/planetas/saturno.png" class="planetas_icones" alt="Icone do planeta Saturno"
-                        style="width: 60px;">
+
+                    
+                        <img src="../css/img/planetas/saturno.png" class="planetas_icones"
+                            alt="Icone do planeta Saturno" id="botao" style="width: 60px;" onclick="exibir_planetas()">
+                  
+
                     <img src="../css/img/planetas/urano.png" class="planetas_icones" alt="Icone do planeta Urano"
                         style="width: 50px;">
                     <img src="../css/img/planetas/netuno.png" class="planetas_icones" alt="Icone do planeta Netuno"
@@ -85,25 +89,25 @@
                 </div>
 
 
-                <div class="caixa_planetas">
+                <div class="caixa_planetas" id="caixa">
 
 
                     <div>
-                          <p class="nomes">Saturno</p>
+                        <p class="nomes">Saturno</p>
 
                         <img src="../css/img/planetas/saturno.gif" alt="gif saturno" class="gif_planetas">
 
-                         <div>
-                           
+                        <div>
+
                             <li><b>Tipo:</b> Planeta gasoso</li>
                             <li><b>Temperatura média:</b> cerca de -140 °C</li>
                             <li><b>Composição predominante:</b> Hidrogênio, hélio e gelo</li>
                         </div>
-                       
+
                     </div>
 
                     <div>
-                        
+
 
                         <p class="infos">
                             Saturno é famoso por seu sistema de anéis, formados por bilhões de partículas de gelo e
@@ -136,7 +140,21 @@
 </body>
 
 </html>
+<script>
+    function exibir_planetas() {
+        const botao = document.getElementById('botao');
+        const caixa = document.getElementById('caixa');
 
+        botao.addEventListener('click', function () {
+            if (caixa.style.display === 'none' || caixa.style.display === '') {
+                caixa.style.display = 'flex';
+            } else {
+                caixa.style.display = 'none';
+            }
+        });
+
+    }
+</script>
 <!--<script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
