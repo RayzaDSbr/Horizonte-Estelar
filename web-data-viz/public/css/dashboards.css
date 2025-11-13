@@ -27,13 +27,37 @@
   padding: 30px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 .gif_planetas{
   margin: 20px;
   width: 320px;
   border-radius: 30px;
+  box-shadow: 0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
 }
 
+li{
+  list-style: none;
+  margin-left: 20px;
+  margin-right: 25px;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 5px;
+  font-size: medium;
+  color: white;
+}
+.infos{
+  margin: 20px; 
+  font-family: "Urbanist", sans-serif;
+  text-align: justify;
+  color: white;
+}
+.nomes{
+  font-size: 40px;
+  text-align: center;
+  margin: 0%;
+  color: #fff;
+  text-shadow:0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
+}
 /* ---------------------- FIM DO CONTEUDO DOS PLANETAS -----------------*/
 body {
   margin: 0;
