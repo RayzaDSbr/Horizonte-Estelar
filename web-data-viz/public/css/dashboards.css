@@ -18,7 +18,11 @@
   margin: 10px 20px;
   cursor: pointer;
 }
-
+.planetas_icones:hover{
+ filter: drop-shadow(0 0 10px #ffee58);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 .caixa_planetas{
   width:750px;
   height: 450px;
