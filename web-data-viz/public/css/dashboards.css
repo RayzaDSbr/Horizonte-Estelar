@@ -54,15 +54,18 @@ background-color: #2381c6;
   background-color: #79b0da;
 }
 .caixa_planetas.jupiter{
-  background-color: #fab95d;
+  background-color: #dea430;
 }
 .caixa_planetas.urano{
   background-color: #5bbdd1;
 }
 .gif_planetas{
   margin: 20px;
+  height: 225px;
   width: 320px;
   border-radius: 30px;
+  object-fit: contain;
+  background-color: black;
 }
 
 .gif_planetas.amarelo{
