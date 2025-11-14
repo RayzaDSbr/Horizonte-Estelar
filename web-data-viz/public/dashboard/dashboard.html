@@ -61,83 +61,224 @@
             </div>
 
         </div>
-       
+
         <div class="dash">
             <!-- Conteudo dos planetas -->
             <div class="planetas_flex">
 
                 <div class="icones_flex">
                     <img src="../css/img/planetas/mercurio.png" class="planetas_icones" alt="Icone do planeta Mercurio"
-                        style="width: 39px;"  id="botao_mercurio" onclick="exibir_planetas_mercurio()">
+                        style="width: 39px;" id="botao_mercurio" onclick="mostrarPlaneta('caixa_mercurio')">
 
                     <img src="../css/img/planetas/venus.png" class="planetas_icones" alt="Icone do planeta Venus"
-                        style="width: 43px;">
+                        style="width: 43px;" id="botao_venus" onclick="mostrarPlaneta('caixa_venus')">
 
                     <img src="../css/img/planetas/planeta-terra.png" class="planetas_icones"
-                        alt="Icone do planeta-terra" style="width: 45px;">
+                        alt="Icone do planeta-terra" style="width: 45px;" id="botao_terra"
+                        onclick="mostrarPlaneta('caixa_terra')">
 
                     <img src="../css/img/planetas/marte.png" class="planetas_icones" alt="Icone do planeta Marte"
-                        style="width: 33px;">
+                        style="width: 33px;" id="botao_marte" onclick="mostrarPlaneta('caixa_marte')">
 
                     <img src="../css/img/planetas/jupiter.png" class="planetas_icones" alt="Icone do planeta Jupiter"
-                        style="width: 65px;">
+                        style="width: 65px;" id="botao_jupiter" onclick="mostrarPlaneta('caixa_jupiter')">
 
-                    
-                        <img src="../css/img/planetas/saturno.png" class="planetas_icones"
-                            alt="Icone do planeta Saturno" id="botao" style="width: 60px;" onclick="exibir_planetas()">
-                  
+
+                    <img src="../css/img/planetas/saturno.png" class="planetas_icones" alt="Icone do planeta Saturno"
+                        style="width: 60px;" id="botao_saturno" onclick="mostrarPlaneta('caixa_saturno')">
+
 
                     <img src="../css/img/planetas/urano.png" class="planetas_icones" alt="Icone do planeta Urano"
-                        style="width: 50px;">
+                        style="width: 50px;" id="botao_urano" onclick="mostrarPlaneta('caixa_urano')">
+
                     <img src="../css/img/planetas/netuno.png" class="planetas_icones" alt="Icone do planeta Netuno"
-                        style="width: 50px;">
+                        style="width: 50px;" id="botao_netuno" onclick="mostrarPlaneta('caixa_netuno')">
+
                 </div>
                 <!--Conteudo mercurio -->
-                <div class="caixa_planetas" id="caixa_mercurio">
+                <div class="caixa_planetas mercurio" id="caixa_mercurio">
                     <div>
-                        <p class="nomes">Mercurio</p>
+                        <p class="nomes">Mercúrio</p>
 
-                        <img src="../css/img/planetas/mercurio.gif" alt="gif mercurio" class="gif_planetas">
+                        <img src="../css/img/planetas/mercurio.gif" alt="gif mercurio" class="gif_planetas cinza">
 
                         <div>
-                            <li><b>Tipo:</b> Planeta gasoso</li>
-                            <li><b>Temperatura média:</b> cerca de -140 °C</li>
-                            <li><b>Composição predominante:</b> Hidrogênio, hélio e gelo</li>
+                            <li><b>Tipo:</b> Planeta rochoso</li>
+                            <li><b>Temperatura média:</b> de -180 °C a 430 °C</li>
+                            <li><b>Composição predominante:</b> Ferro e silício</li>
                         </div>
 
                     </div>
 
                     <div>
+                        <p class="infos">
+                            Mercúrio é o planeta mais próximo do Sol e o menor do Sistema Solar. Por causa dessa
+                            proximidade, ele completa uma volta ao redor do Sol em apenas 88 dias terrestres, o que faz
+                            seu ano ser o mais curto de todos. Apesar disso, sua rotação é lenta: um dia em Mercúrio
+                            dura o equivalente a 59 dias na Terra.
 
-                        <p class="infos">
-                            Saturno é famoso por seu sistema de anéis, formados por bilhões de partículas de gelo e
-                            rocha que
-                            refletem a luz do Sol, criando um espetáculo visual único. Ele é o segundo maior planeta do
-                            Sistema
-                            Solar e, assim como Júpiter, é composto principalmente por hidrogênio e hélio.
                         </p>
-                        <p class="infos">
-                            Apesar do tamanho, Saturno é o planeta menos denso, se existisse um oceano grande o
-                            bastante, ele
-                            flutuaria. Seus ventos podem ultrapassar 1.800 km/h, e sua atmosfera apresenta faixas de
-                            nuvens em
-                            tons suaves de amarelo e dourado.
+                        <p class="infos">Por não ter uma atmosfera densa, as temperaturas variam drasticamente — durante
+                            o dia, podem ultrapassar 430 °C, e à noite despencam para -180 °C. Sua superfície é repleta
+                            de crateras e planícies formadas por antigos impactos de meteoros, lembrando bastante a Lua.
                         </p>
                         <p class="infos">
 
-                            Entre suas mais de 80 luas, destaca-se Titã, que possui uma atmosfera densa e lagos de
-                            metano
-                            líquido, sendo um dos lugares mais promissores para o estudo da vida fora da Terra.
+                            Mesmo sendo pequeno, Mercúrio possui um núcleo de ferro muito grande em relação ao seu
+                            tamanho, o que gera um campo magnético fraco, mas perceptível. Esse núcleo metálico é um dos
+                            grandes mistérios sobre sua formação.
                         </p>
 
                     </div>
                 </div>
+                <!-- Conteudo Vênus -->
+                <div class="caixa_planetas venus" id="caixa_venus">
+                    <div>
+                        <p class="nomes">Vênus</p>
+
+                        <img src="../css/img/planetas/venus.gif" alt="gif venus" class="gif_planetas laranja">
+
+                        <div>
+                            <li><b>Tipo:</b> Planeta rochoso</li>
+                            <li><b>Temperatura média:</b> cerca de 465 °C</li>
+                            <li><b>Composição predominante:</b> Rocha e dióxido de carbono</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="infos">
+                            Vênus é muitas vezes chamado de “planeta irmão” da Terra devido ao tamanho semelhante, mas
+                            suas
+                            condições são extremamente hostis. Sua atmosfera é tão densa que a pressão na superfície é
+                            cerca
+                            de 90 vezes maior que a da Terra.
+                        </p>
+                        <p class="infos">
+                            A presença massiva de dióxido de carbono provoca um efeito estufa intenso, tornando Vênus o
+                            planeta
+                            mais quente do Sistema Solar. Suas nuvens são compostas por ácido sulfúrico, criando um
+                            ambiente tóxico.
+                        </p>
+                        <p class="infos">
+                            Curiosamente, Vênus gira no sentido contrário à maioria dos planetas e tem um dia mais longo
+                            que seu ano,
+                            completando uma rotação em 243 dias terrestres.
+                        </p>
+                    </div>
+                </div>
+                <!-- Conteudo Terra -->
+                <div class="caixa_planetas terra" id="caixa_terra">
+                    <div>
+                        <p class="nomes">Terra</p>
+
+                        <img src="../css/img/planetas/terra.gif" alt="gif terra" class="gif_planetas azul">
+
+                        <div>
+                            <li><b>Tipo:</b> Planeta rochoso</li>
+                            <li><b>Temperatura média:</b> cerca de 15 °C</li>
+                            <li><b>Composição predominante:</b> Ferro, oxigênio, silício e magnésio</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="infos">
+                            A Terra é o único planeta conhecido que abriga vida, graças à sua posição ideal em relação
+                            ao Sol,
+                            atmosfera protetora e abundância de água líquida. Esses fatores criam um clima equilibrado e
+                            estável.
+                        </p>
+                        <p class="infos">
+                            A superfície terrestre é moldada por placas tectônicas, responsáveis por montanhas,
+                            terremotos e vulcões.
+                            Além disso, cerca de 70% do planeta é coberto por oceanos, fundamentais para manter a
+                            temperatura global.
+                        </p>
+                        <p class="infos">
+                            Nossa Lua tem grande importância: ela estabiliza a inclinação da Terra e influencia
+                            diretamente as marés,
+                            contribuindo para o equilíbrio climático que possibilita a vida.
+                        </p>
+                    </div>
+                </div>
+                <!-- Conteudo Marte -->
+                <div class="caixa_planetas marte" id="caixa_marte">
+                    <div>
+                        <p class="nomes">Marte</p>
+
+                        <img src="../css/img/planetas/marte.gif" alt="gif marte" class="gif_planetas laranja">
+
+                        <div>
+                            <li><b>Tipo:</b> Planeta rochoso</li>
+                            <li><b>Temperatura média:</b> cerca de -60 °C</li>
+                            <li><b>Composição predominante:</b> Ferro, magnésio e silício</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="infos">
+                            Marte é conhecido como o “planeta vermelho” devido ao óxido de ferro presente em sua
+                            superfície.
+                            É frio, seco e possui uma atmosfera muito fina, composta principalmente por dióxido de
+                            carbono.
+                        </p>
+                        <p class="infos">
+                            Mesmo assim, há grandes evidências de que no passado houve rios e lagos, o que desperta o
+                            interesse
+                            científico sobre vida microscópica antiga. Suas formações geológicas incluem o Monte Olimpo,
+                            o maior vulcão do Sistema Solar.
+                        </p>
+                        <p class="infos">
+                            Missões como Perseverance e Curiosity investigam sua superfície, buscando pistas sobre vida
+                            e possibilidades
+                            futuras de colonização humana.
+                        </p>
+                    </div>
+                </div>
+                <!-- Conteudo Júpiter -->
+                <div class="caixa_planetas jupiter" id="caixa_jupiter">
+                    <div>
+                        <p class="nomes">Júpiter</p>
+
+                        <img src="../css/img/planetas/jupiter.gif" alt="gif jupiter" class="gif_planetas amarelo">
+
+                        <div>
+                            <li><b>Tipo:</b> Planeta gasoso</li>
+                            <li><b>Temperatura média:</b> cerca de -110 °C</li>
+                            <li><b>Composição predominante:</b> Hidrogênio e hélio</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="infos">
+                            Júpiter é o maior planeta do Sistema Solar, com massa superior à de todos os outros planetas
+                            juntos.
+                            Sua atmosfera apresenta faixas coloridas e tempestades gigantes, incluindo a famosa Grande
+                            Mancha Vermelha.
+                        </p>
+                        <p class="infos">
+                            Ele possui o campo magnético mais forte entre os planetas e mais de 90 luas conhecidas.
+                            Entre elas está
+                            Europa, que abriga um oceano subterrâneo e é um dos maiores candidatos a ter vida fora da
+                            Terra.
+                        </p>
+                        <p class="infos">
+                            Apesar de ser composto principalmente por gases, acredita-se que Júpiter possua um núcleo
+                            sólido
+                            extremamente denso.
+                        </p>
+                    </div>
+                </div>
+
                 <!--Conteudo saturno -->
-                <div class="caixa_planetas" id="caixa">
+                <div class="caixa_planetas saturno" id="caixa_saturno">
                     <div>
                         <p class="nomes">Saturno</p>
 
-                        <img src="../css/img/planetas/saturno.gif" alt="gif saturno" class="gif_planetas">
+                        <img src="../css/img/planetas/saturno.gif" alt="gif saturno" class="gif_planetas amarelo">
 
                         <div>
 
@@ -149,7 +290,6 @@
                     </div>
 
                     <div>
-
 
                         <p class="infos">
                             Saturno é famoso por seu sistema de anéis, formados por bilhões de partículas de gelo e
@@ -173,40 +313,90 @@
                         </p>
 
                     </div>
-                
+
+                </div>
+                <!-- Conteudo Urano -->
+                <div class="caixa_planetas urano" id="caixa_urano">
+                    <div>
+                        <p class="nomes">Urano</p>
+
+                        <img src="../css/img/planetas/urano.gif" alt="gif urano" class="gif_planetas azul">
+
+                        <div>
+                            <li><b>Tipo:</b> Gigante gelado</li>
+                            <li><b>Temperatura média:</b> cerca de -195 °C</li>
+                            <li><b>Composição predominante:</b> Hidrogênio, hélio e metano</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="infos">
+                            Urano se destaca por girar completamente inclinado, quase de lado, o que cria estações com
+                            42 anos
+                            de luz ou escuridão. Sua coloração azul-esverdeada é causada pela presença de metano na
+                            atmosfera.
+                        </p>
+                        <p class="infos">
+                            O planeta é extremamente frio e possui ventos que ultrapassam 900 km/h. Também apresenta
+                            finos anéis
+                            e diversas luas nomeadas a partir de obras de Shakespeare e Alexander Pope.
+                        </p>
+                        <p class="infos">
+                            Acredita-se que Urano tenha um interior composto por gelo de água, amônia e metano,
+                            caracterizando o tipo “gigante gelado”.
+                        </p>
+                    </div>
+                </div>
+                <!-- Conteudo Netuno -->
+                <div class="caixa_planetas netuno" id="caixa_netuno">
+                    <div>
+                        <p class="nomes">Netuno</p>
+
+                        <img src="../css/img/planetas/netuno.gif" alt="gif netuno" class="gif_planetas azul">
+
+                        <div>
+                            <li><b>Tipo:</b> Gigante gelado</li>
+                            <li><b>Temperatura média:</b> cerca de -200 °C</li>
+                            <li><b>Composição predominante:</b> Hidrogênio, hélio e metano</li>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="infos">
+                            Netuno é o planeta mais distante do Sol e o mais ventoso do Sistema Solar, com rajadas que
+                            ultrapassam
+                            2.000 km/h. Sua intensa coloração azul é causada pelo metano e pela forma como sua atmosfera
+                            dispersa a luz.
+                        </p>
+                        <p class="infos">
+                            O planeta possui um sistema de anéis finos e várias luas, sendo Tritão a mais importante.
+                            Tritão pode ter
+                            atividade geológica e acredita-se que seja um objeto capturado do Cinturão de Kuiper.
+                        </p>
+                        <p class="infos">
+                            Mesmo tão distante do Sol, Netuno emite mais calor do que recebe, o que indica um interior
+                            ativo
+                            e cheio de mistérios.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
 
 
 </body>
 
 </html>
 <script>
-    function exibir_planetas() {
-        const botao = document.getElementById('botao');
-        const caixa = document.getElementById('caixa');
+    function mostrarPlaneta(idCaixa) {
+        const caixas = document.querySelectorAll('.caixa_planetas');
 
-        botao.addEventListener('click', function () {
-            if (caixa.style.display === 'none' || caixa.style.display === '') {
-                caixa.style.display = 'flex';
-            } else {
-                caixa.style.display = 'none';
-            }
-        });
-    }
-/*Mercurio*/
-    function exibir_planetas_mercurio() {
-        const botao_mercurio = document.getElementById('botao_mercurio');
-        const caixa_mercurio = document.getElementById('caixa_mercurio');
+        caixas.forEach(c => c.style.display = 'none');
 
-        botao_mercurio.addEventListener('click', function () {
-            if (caixa_mercurio.style.display === 'none' || caixa_mercurio.style.display === '') {
-                caixa_mercurio.style.display = 'flex';
-            } else {
-                caixa_mercurio.style.display = 'none';
-            }
-        });
+        document.getElementById(idCaixa).style.display = 'flex';
     }
 </script>
 <!--<script>
