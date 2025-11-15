@@ -88,6 +88,7 @@ p.titulo {
   color: aliceblue;
   text-align: center;
   margin-bottom: 10px;
+  text-shadow:0 0 20px #b181dd;
 }
 
 p.subtitulo {
@@ -120,19 +121,28 @@ p.texto {
   padding: 90px;
 }
 
+p.texto2 {
+  color: aliceblue;
+  font-family: "Urbanist", sans-serif;
+  padding: 0px 90px 0px 10px;
+}
 
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+hr{
+ width: 1172px;
+  border: none;
+  border-top: 1px solid #4A4545; 
+}
 /* --------------------------- FIM HOME --------------------------------*/
 
 /* --------------------------- FOOTER --------------------------------*/
 footer{
   background-color: #191526;
 }
-.footer1{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-
 .footer2{
   display: flex;
   justify-content: space-between;
@@ -153,8 +163,20 @@ footer{
   font-family: "Megrim", system-ui;
   font-weight: 400;
   color: white;
-  font-size: 22px;
+  font-size: 30px;
   margin: 20px;
+}
+.icone-footer{
+  margin: 30px;
+  width: 100px;
+  margin-right: 46px;
+}
+.text-footer{
+  font-family: "Urbanist", sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 30px;
 }
 /* --------------------------- FIM FOOTER --------------------------------*/
 
