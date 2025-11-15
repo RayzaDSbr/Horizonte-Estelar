@@ -133,6 +133,29 @@ footer{
   flex-direction: row;
 }
 
+.footer2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.redes-flex{
+   gap: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+.redes{
+  width: 25px;
+  margin:13px 0px 12px 12px;
+}
+
+.logo-footer{
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  color: white;
+  font-size: 22px;
+  margin: 20px;
+}
 /* --------------------------- FIM FOOTER --------------------------------*/
 
 
