@@ -41,19 +41,21 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="./cards.html">
+                <a href="">
                     <h3>Planetas</h3>
                 </a>
             </div>
 
             <div class="btn-nav-white">
 
-                <h3>Game</h3>
+                <a href="game.html">
+                    <h3>Game</h3>
+                </a>
 
             </div>
 
             <div class="btn-nav-white">
-                <a href="./mural.html">
+                <a href="graficos.html">
                     <h3>Dashboard</h3>
                 </a>
             </div>
@@ -400,6 +402,10 @@
         caixas.forEach(c => c.style.display = 'none');
 
         document.getElementById(idCaixa).style.display = 'flex';
+    }
+
+     window.onload = function () {
+        mostrarPlaneta('caixa_mercurio');
     }
 </script>
 <!--<script>
