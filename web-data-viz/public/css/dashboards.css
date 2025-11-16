@@ -2,6 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Megrim&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ---------------------- DASHBOARD INICIAL -----------------*/
+p.boasVindas {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-size: 80px;
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow:0 0 20px #b181dd;
+}
+p.boasVindas2 {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-size: 60px;
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow:0 0 20px #b181dd;
+}
+/* ---------------------- FIM DASHBOARD INICIAL -----------------*/
 /* ---------------------- CONTEUDO DOS PLANETAS -----------------*/
 .planetas_flex{
   display: flex;
