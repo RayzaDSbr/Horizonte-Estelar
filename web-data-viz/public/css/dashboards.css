@@ -2,6 +2,60 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Megrim&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ---------------------- GRAFICOS DASHBOARD OFICIAL -----------------*/
+.tit{
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  margin: 0px;
+}
+.graficos_flex{
+  display: flex;
+  justify-content: flex-start;
+}
+.caixa_graficos{
+ border-radius: 10px;
+  border: 0.5px solid #FFF9F9;
+  padding: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow:0px 7px 8px 0px #30373e;
+  margin: 10px 31px;
+}
+.caixa_graficos.indicador1{
+  width:300px;
+  height: 50px;
+ 
+}
+.caixa_graficos.indicador2{
+  width:150px;
+  height: 50px;
+ 
+}
+.caixa_graficos.indicador3{
+  width:573px;
+  height: 100px;
+}
+
+.caixa_graficos.indicador4{
+  width: 150px;
+  height: 100px;
+  
+}
+
+.caixa_graficos.indicador5{
+  width: 573px;
+  height: 126px;
+ 
+}
+
+.caixa_graficos.indicador6{
+  width: 150px;
+  height: 126px;
+ 
+}
+/* ---------------------- FIM GRAFICOS DASHBOARD OFICIAL -----------------*/
 /* ---------------------- DASHBOARD INICIAL -----------------*/
 p.boasVindas {
   font-family: "Megrim", system-ui;
