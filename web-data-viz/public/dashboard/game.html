@@ -66,25 +66,25 @@
 
             <div>
                 <div style="display: flex; justify-content: center;">
-                    <div style="display: flex; flex-flow: column;" id="div_msg"> <button onclick="selecao_lua_l()"> L
+                    <div style="display: flex; flex-flow: column;" id="div_msg"> <button class="letras" onclick="selecao_lua_l()"> L
                         </button>
                     </div>
-                    <div style="display: flex; flex-flow: column;" id="div_msg2"> <button onclick="selecao_lua_u()"> U
+                    <div style="display: flex; flex-flow: column;" id="div_msg2"> <button class="letras" onclick="selecao_lua_u()"> U
                         </button>
                     </div>
-                    <div style="display: flex; flex-flow: column;" id="div_msg3"><button onclick="selecao_lua_a()"> A
+                    <div style="display: flex; flex-flow: column;" id="div_msg3"><button class="letras" onclick="selecao_lua_a()"> A
                         </button>
                     </div>
                     <div style="display: flex; flex-flow: column;" id="div_msg4"></div>
                     <div style="display: flex; flex-flow: column;" id="div_msg5"></div>
                     <div style="display: flex; flex-flow: column;" id="div_msg6">
-                        <button onclick="selecao_galaxia_g()"> G </button>
-                        <button onclick="selecao_galaxia_a1()"> A </button>
-                        <button onclick="selecao_galaxia_l()"> L </button>
-                        <button onclick="selecao_galaxia_a2()"> A </button>
-                        <button onclick="selecao_galaxia_x()"> X </button>
-                        <button onclick="selecao_galaxia_i()"> I </button>
-                        <button onclick="selecao_galaxia_a3()"> A </button>
+                        <button class="letras" onclick="selecao_galaxia_g()"> G </button>
+                        <button class="letras" onclick="selecao_galaxia_a1()"> A </button>
+                        <button class="letras" onclick="selecao_galaxia_l()"> L </button>
+                        <button class="letras" onclick="selecao_galaxia_a2()"> A </button>
+                        <button class="letras" onclick="selecao_galaxia_x()"> X </button>
+                        <button class="letras" onclick="selecao_galaxia_i()"> I </button>
+                        <button class="letras" onclick="selecao_galaxia_a3()"> A </button>
 
                     </div>
                     <div style="display: flex; flex-flow: column;" id="div_msg7"></div>
@@ -103,28 +103,28 @@
         var numero = Math.floor(Math.random() * 26);
         var letra = alfabeto[numero];
 
-        div_msg.innerHTML += '<button>' + letra + '</button> ';
+        div_msg.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg2.innerHTML += '<button>' + letra + '</button> ';
+        div_msg2.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg3.innerHTML += '<button>' + letra + '</button> ';
+        div_msg3.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg4.innerHTML += '<button>' + letra + '</button> ';
+        div_msg4.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg5.innerHTML += '<button>' + letra + '</button> ';
+        div_msg5.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg6.innerHTML += '<button>' + letra + '</button> ';
+        div_msg6.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg7.innerHTML += '<button>' + letra + '</button> ';
+        div_msg7.innerHTML += '<button class="letras">' + letra + '</button> ';
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg8.innerHTML += '<button>' + letra + '</button> ';
+        div_msg8.innerHTML += '<button class="letras">' + letra + '</button> ';
 
     }
 

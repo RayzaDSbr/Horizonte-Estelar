@@ -2,59 +2,83 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Megrim&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ---------------------- CAÇA PALAVRAS -----------------*/
+button.letras {
+  width: 25px;
+  height: 25px;
+  background: #E9A46A;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 0 5px #4ea4ff;
+} 
+
+.marcada {
+  background: #4ea4ff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* ---------------------- FIM CAÇA PALAVRAS -----------------*/
 /* ---------------------- GRAFICOS DASHBOARD OFICIAL -----------------*/
-.tit{
+.tit {
   font-size: 25px;
   text-align: center;
   color: white;
   font-family: "Urbanist", sans-serif;
   margin: 0px;
 }
-.graficos_flex{
+
+.graficos_flex {
   display: flex;
   justify-content: flex-start;
 }
-.caixa_graficos{
- border-radius: 10px;
+
+.caixa_graficos {
+  border-radius: 10px;
   border: 0.5px solid #FFF9F9;
   padding: 30px;
   justify-content: flex-start;
   align-items: center;
-  box-shadow:0px 7px 8px 0px #30373e;
+  box-shadow: 0px 7px 8px 0px #30373e;
   margin: 10px 31px;
 }
-.caixa_graficos.indicador1{
-  width:300px;
+
+.caixa_graficos.indicador1 {
+  width: 300px;
   height: 50px;
- 
+
 }
-.caixa_graficos.indicador2{
-  width:150px;
+
+.caixa_graficos.indicador2 {
+  width: 150px;
   height: 50px;
- 
+
 }
-.caixa_graficos.indicador3{
-  width:573px;
+
+.caixa_graficos.indicador3 {
+  width: 573px;
   height: 100px;
 }
 
-.caixa_graficos.indicador4{
+.caixa_graficos.indicador4 {
   width: 150px;
   height: 100px;
-  
+
 }
 
-.caixa_graficos.indicador5{
+.caixa_graficos.indicador5 {
   width: 573px;
   height: 126px;
- 
+
 }
 
-.caixa_graficos.indicador6{
+.caixa_graficos.indicador6 {
   width: 150px;
   height: 126px;
- 
+
 }
+
 /* ---------------------- FIM GRAFICOS DASHBOARD OFICIAL -----------------*/
 /* ---------------------- DASHBOARD INICIAL -----------------*/
 p.boasVindas {
@@ -64,8 +88,9 @@ p.boasVindas {
   color: aliceblue;
   text-align: center;
   margin-bottom: 10px;
-  text-shadow:0 0 20px #b181dd;
+  text-shadow: 0 0 20px #b181dd;
 }
+
 p.boasVindas2 {
   font-family: "Megrim", system-ui;
   font-weight: 400;
@@ -73,32 +98,36 @@ p.boasVindas2 {
   color: aliceblue;
   text-align: center;
   margin-bottom: 10px;
-  text-shadow:0 0 20px #b181dd;
+  text-shadow: 0 0 20px #b181dd;
 }
+
 /* ---------------------- FIM DASHBOARD INICIAL -----------------*/
 /* ---------------------- CONTEUDO DOS PLANETAS -----------------*/
-.planetas_flex{
+.planetas_flex {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.icones_flex{
+.icones_flex {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.planetas_icones{
+
+.planetas_icones {
   margin: 10px 20px;
   cursor: pointer;
 }
-.planetas_icones:hover{
- filter: drop-shadow(0 0 10px #ffee58);
+
+.planetas_icones:hover {
+  filter: drop-shadow(0 0 10px #ffee58);
   transform: scale(1.05);
   transition: 0.3s;
 }
-.caixa_planetas{
-  width:750px;
+
+.caixa_planetas {
+  width: 750px;
   height: 450px;
   border-radius: 5px;
   padding: 30px;
@@ -108,32 +137,40 @@ p.boasVindas2 {
   box-shadow: 4px 3px 20px 0px #c2bd8a
 }
 
-.caixa_planetas.saturno{
-background-color: #F09C23;
+.caixa_planetas.saturno {
+  background-color: #F09C23;
 
 }
-.caixa_planetas.mercurio{
-background-color: #89939c;
+
+.caixa_planetas.mercurio {
+  background-color: #89939c;
 }
-.caixa_planetas.venus{
-background-color: #ea5d22;
+
+.caixa_planetas.venus {
+  background-color: #ea5d22;
 }
-.caixa_planetas.marte{
+
+.caixa_planetas.marte {
   background-color: #e1391d;
 }
-.caixa_planetas.netuno{
-background-color: #2381c6;
+
+.caixa_planetas.netuno {
+  background-color: #2381c6;
 }
-.caixa_planetas.terra{
+
+.caixa_planetas.terra {
   background-color: #79b0da;
 }
-.caixa_planetas.jupiter{
+
+.caixa_planetas.jupiter {
   background-color: #dea430;
 }
-.caixa_planetas.urano{
+
+.caixa_planetas.urano {
   background-color: #5bbdd1;
 }
-.gif_planetas{
+
+.gif_planetas {
   margin: 20px;
   height: 225px;
   width: 320px;
@@ -142,19 +179,23 @@ background-color: #2381c6;
   background-color: black;
 }
 
-.gif_planetas.amarelo{
-   box-shadow: 0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
+.gif_planetas.amarelo {
+  box-shadow: 0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
 }
-.gif_planetas.azul{
-   box-shadow:0 0 5px #8bccfc, 0 0 10px #3993d5, 0 0 20px #7bc7ff, 0 0 40px #aadbff;
+
+.gif_planetas.azul {
+  box-shadow: 0 0 5px #8bccfc, 0 0 10px #3993d5, 0 0 20px #7bc7ff, 0 0 40px #aadbff;
 }
-.gif_planetas.cinza{
-   box-shadow: 0 0 5px #fefefe, 0 0 10px #fefefe, 0 0 20px #fefefe, 0 0 40px #fefefe;
+
+.gif_planetas.cinza {
+  box-shadow: 0 0 5px #fefefe, 0 0 10px #fefefe, 0 0 20px #fefefe, 0 0 40px #fefefe;
 }
-.gif_planetas.laranja{
-   box-shadow: 0 0 5px #fa8b3b, 0 0 10px #fa8b3b, 0 0 20px #fa8b3b, 0 0 40px #fa8b3b;
+
+.gif_planetas.laranja {
+  box-shadow: 0 0 5px #fa8b3b, 0 0 10px #fa8b3b, 0 0 20px #fa8b3b, 0 0 40px #fa8b3b;
 }
-li{
+
+li {
   list-style: none;
   margin-left: 20px;
   margin-right: 25px;
@@ -163,19 +204,22 @@ li{
   font-size: medium;
   color: white;
 }
-.infos{
-  margin: 20px; 
+
+.infos {
+  margin: 20px;
   font-family: "Urbanist", sans-serif;
   text-align: justify;
   color: white;
 }
-.nomes{
+
+.nomes {
   font-size: 40px;
   text-align: center;
   margin: 0%;
   color: #fff;
-  text-shadow:0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
+  text-shadow: 0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
 }
+
 /* ---------------------- FIM DO CONTEUDO DOS PLANETAS -----------------*/
 body {
   margin: 0;
