@@ -110,6 +110,17 @@ p.subtitulo {
   text-align: center;
 }
 /*CONTEUDOS SOBRE MIM*/
+p.subtitulo.a {
+  font-size: 60px;
+}
+.fotos_youtubers{
+  width: 400px;
+  border: 2px dashed white;
+}
+.duasPartes{
+  display: flex;
+  justify-content: flex-start;
+}
 div.fundo {
   background-color: black;
   display: flex;
@@ -124,6 +135,8 @@ div.fundo {
   padding: 10px;
   text-align: justify;
 }
+
+
 
 .margin_paragrafo{
   margin: 10px 300px;
@@ -339,17 +352,13 @@ input:focus {
 #saida {
   left: 50%;
   transform: translateX(-50%);
-  /* ponto de ref do centro da tela */
   opacity: 0;
-  /* começa invisivel */
   z-index: 1;
-  /* ordem de empilhamento dos elementos, saida atras da calculadora*/
 }
 
 /* quando ativar, move para a direita */
 #saida.show {
   left: calc(50% + 350px);
-  /* medida ate a esquerda da tela */
   transform: translateX(-50%);
   opacity: 1;
 }
