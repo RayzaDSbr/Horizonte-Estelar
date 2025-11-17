@@ -112,14 +112,19 @@ p.subtitulo {
 /*CONTEUDOS SOBRE MIM*/
 p.subtitulo.a {
   font-size: 60px;
+  margin: 35px;
 }
 .fotos_youtubers{
   width: 400px;
+  height: 245px;
   border: 2px dashed white;
+  margin: 15px;
 }
 .duasPartes{
   display: flex;
   justify-content: flex-start;
+  align-items: baseline;
+  background-color: black;
 }
 div.fundo {
   background-color: black;
@@ -136,10 +141,16 @@ div.fundo {
   text-align: justify;
 }
 
+.paragrafo.a{
+  padding: 15px 120px;
+  margin: 10px;
+}
 
-
+.paragrafo.b{
+  padding: 15px 76px;
+}
 .margin_paragrafo{
-  margin: 10px 300px;
+  margin: 30px 350px;
 }
 /*FIM CONTEUDOS SOBRE MIM*/
 /*CONTEUDOS HOME*/
