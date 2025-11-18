@@ -67,32 +67,55 @@
             <div>
                 <div style="display: flex; justify-content: center;">
                     <!-- coluna 1-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg">
-                      
-                    </div>
-                    <!-- coluna 2-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg2">
-                      
-                    </div>
-                    <!-- coluna 3-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg3">
-                    
-                    </div>
-                    <!-- coluna 4-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg4">
+                    <div style="display: flex; flex-flow: column;" id="div_msg"> </div>
 
-                    </div>
+                    <!-- coluna 2-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg2"> </div>
+
+                    <!-- coluna 3-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg3"> </div>
+
+                    <!-- coluna 4-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg4"> </div>
+
                     <!-- coluna 5-->
                     <div style="display: flex; flex-flow: column;" id="div_msg5"></div>
-                    <!-- coluna 6-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg6">
 
-                    </div>
+                    <!-- coluna 6-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg6"> </div>
+
                     <!-- coluna 7-->
                     <div style="display: flex; flex-flow: column;" id="div_msg7"></div>
+
                     <!-- coluna 8-->
                     <div style="display: flex; flex-flow: column;" id="div_msg8"></div>
 
+                    <!-- coluna 9-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg9"></div>
+
+                    <!-- coluna 10-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg10"></div>
+
+                    <!-- coluna 11-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg11"></div>
+
+                    <!-- coluna 12-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg12"></div>
+
+                    <!-- coluna 13-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg13"></div>
+
+                    <!-- coluna 14-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg14"></div>
+
+                    <!-- coluna 15-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg15"></div>
+
+                    <!-- coluna 16-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg16"></div>
+
+                    <!-- coluna 17-->
+                    <div style="display: flex; flex-flow: column;" id="div_msg17"></div>
                 </div>
 
             </div>
@@ -101,18 +124,18 @@
         </div>
 </body>
 <script>
-    /* Criando as palavras aleatorias */
+    /* Criando as letras aleatorias */
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for (let index = 0; index < 15; index++) {
-        /* coluna 1*/
-          /*LUA*/
-        if(index == 1){
+      
+        /*LUA*/
+        if (index == 1) {
             div_msg.innerHTML += '<button class="letras" onclick="selecao_lua_l"> L </button>';
-               div_msg2.innerHTML += '<button class="letras" onclick="selecao_lua_u"> U </button>';
-                  div_msg3.innerHTML += '<button class="letras" onclick="selecao_lua_a"> A </button>';
+            div_msg2.innerHTML += '<button class="letras" onclick="selecao_lua_u"> U </button>';
+            div_msg3.innerHTML += '<button class="letras" onclick="selecao_lua_a"> A </button>';
         }
-       
+
         /*GRAVIDADE*/
         if (index == 9) {
             div_msg.innerHTML += '<button class="letras" onclick="selecao_grav_g()"> G </button>';
@@ -120,16 +143,18 @@
             div_msg3.innerHTML += '<button class="letras" onclick="selecao_grav_a()"> A </button>';
         }
         if (index == 10) {
-             div_msg4.innerHTML += '<button class="letras" onclick="selecao_grav_v()"> V </button>';
-                div_msg5.innerHTML += '<button class="letras" onclick="selecao_grav_i()"> I </button>';
-                div_msg6.innerHTML += '<button class="letras" onclick="selecao_grav_d()"> D </button>';
-                div_msg7.innerHTML += '<button class="letras" onclick="selecao_grav_a2()"> A </button>';
-                div_msg8.innerHTML += '<button class="letras" onclick="selecao_grav_d()"> D </button>';
-                div_msg9.innerHTML += '<button class="letras" onclick="selecao_grav_e()"> E </button>';
+            div_msg4.innerHTML += '<button class="letras" onclick="selecao_grav_v()"> V </button>';
+            div_msg5.innerHTML += '<button class="letras" onclick="selecao_grav_i()"> I </button>';
+            div_msg6.innerHTML += '<button class="letras" onclick="selecao_grav_d()"> D </button>';
+            div_msg7.innerHTML += '<button class="letras" onclick="selecao_grav_a2()"> A </button>';
+            div_msg8.innerHTML += '<button class="letras" onclick="selecao_grav_d()"> D </button>';
+            div_msg9.innerHTML += '<button class="letras" onclick="selecao_grav_e()"> E </button>';
         }
+
+        /* coluna 1*/
         var numero = Math.floor(Math.random() * 26);
         var letra = alfabeto[numero];
-       
+
         div_msg.innerHTML += '<button class="letras">' + letra + '</button> ';
 
         /*coluna 2*/
@@ -142,27 +167,75 @@
         letra = alfabeto[numero];
         div_msg3.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-    
         /*coluna 4*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg4.innerHTML += '<button class="letras">' + letra + '</button> ';
+
         /*coluna 5*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg5.innerHTML += '<button class="letras">' + letra + '</button> ';
+
         /*coluna 6*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg6.innerHTML += '<button class="letras">' + letra + '</button> ';
+
         /*coluna 7*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg7.innerHTML += '<button class="letras">' + letra + '</button> ';
+
         /*coluna 8*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg8.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 9*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg9.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 10*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg10.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 11*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg11.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 12*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg12.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 13*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg13.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 14*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg14.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 15*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg15.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 16*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg16.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+        /*coluna 17*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg17.innerHTML += '<button class="letras">' + letra + '</button> ';
 
     }
 
