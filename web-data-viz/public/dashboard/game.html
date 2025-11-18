@@ -66,13 +66,16 @@
 
             <div>
                 <div style="display: flex; justify-content: center;">
-                    <div style="display: flex; flex-flow: column;" id="div_msg"> <button class="letras" onclick="selecao_lua_l()"> L
+                    <div style="display: flex; flex-flow: column;" id="div_msg"> <button class="letras"
+                            onclick="selecao_lua_l()"> L
                         </button>
                     </div>
-                    <div style="display: flex; flex-flow: column;" id="div_msg2"> <button class="letras" onclick="selecao_lua_u()"> U
+                    <div style="display: flex; flex-flow: column;" id="div_msg2"> <button class="letras"
+                            onclick="selecao_lua_u()"> U
                         </button>
                     </div>
-                    <div style="display: flex; flex-flow: column;" id="div_msg3"><button class="letras" onclick="selecao_lua_a()"> A
+                    <div style="display: flex; flex-flow: column;" id="div_msg3"><button class="letras"
+                            onclick="selecao_lua_a()"> A
                         </button>
                     </div>
                     <div style="display: flex; flex-flow: column;" id="div_msg4"></div>
@@ -132,53 +135,190 @@
     var lua = ['l', 'u', 'a'];
     var jogo = [];
 
-    function selecao_lua_l() {
-        jogo.push('l');
-    }
-    function selecao_lua_u() {
-        jogo.push('u');
-    }
-    function selecao_lua_a() {
-        jogo.push('a');
-    }
+    function selecao_lua_l() { jogo.push('l'); }
+    function selecao_lua_u() { jogo.push('u'); }
+    function selecao_lua_a() { jogo.push('a'); }
 
     //palavra galaxia
     var galaxia = ['g', 'a', 'l', 'a', 'x', 'i', 'a'];
     var sel_galaxia = [];
 
-    function selecao_galaxia_g() {
-        sel_galaxia.push('g');
-    }
+    function selecao_galaxia_g() { sel_galaxia.push('g'); }
+    function selecao_galaxia_a1() { sel_galaxia.push('a'); }
+    function selecao_galaxia_l() { sel_galaxia.push('l'); }
+    function selecao_galaxia_a2() { sel_galaxia.push('a'); }
+    function selecao_galaxia_x() { sel_galaxia.push('x'); }
+    function selecao_galaxia_i() { sel_galaxia.push('i'); }
+    function selecao_galaxia_a3() { sel_galaxia.push('a'); }
 
-    function selecao_galaxia_a1() {
-        sel_galaxia.push('a');
-    }
+    //palavra terra
+    var terra = ['t', 'e', 'r', 'r', 'a'];
+    var sel_terra = [];
 
-    function selecao_galaxia_l() {
-        sel_galaxia.push('l');
-    }
+    function selecao_terra_t() { sel_terra.push('t'); }
+    function selecao_terra_e() { sel_terra.push('e'); }
+    function selecao_terra_r1() { sel_terra.push('r'); }
+    function selecao_terra_r2() { sel_terra.push('r'); }
+    function selecao_terra_a() { sel_terra.push('a'); }
 
-    function selecao_galaxia_a2() {
-        sel_galaxia.push('a');
-    }
+    // palavra sol
+    var sol = ['s', 'o', 'l'];
+    var sel_sol = [];
 
-    function selecao_galaxia_x() {
-        sel_galaxia.push('x');
-    }
+    function selecao_sol_s() { sel_sol.push('s'); }
+    function selecao_sol_o() { sel_sol.push('o'); }
+    function selecao_sol_l() { sel_sol.push('l'); }
 
-    function selecao_galaxia_i() {
-        sel_galaxia.push('i');
-    }
+    // palavra marte
+    var marte = ['m', 'a', 'r', 't', 'e'];
+    var sel_marte = [];
 
-    function selecao_galaxia_a3() {
-        sel_galaxia.push('a');
-    }
+    function selecao_marte_m() { sel_marte.push('m'); }
+    function selecao_marte_a() { sel_marte.push('a'); }
+    function selecao_marte_r() { sel_marte.push('r'); }
+    function selecao_marte_t() { sel_marte.push('t'); }
+    function selecao_marte_e() { sel_marte.push('e'); }
+
+    // palavra saturno
+    var saturno = ['s', 'a', 't', 'u', 'r', 'n', 'o'];
+    var sel_saturno = [];
+
+    function selecao_saturno_s() { sel_saturno.push('s'); }
+    function selecao_saturno_a() { sel_saturno.push('a'); }
+    function selecao_saturno_t() { sel_saturno.push('t'); }
+    function selecao_saturno_u() { sel_saturno.push('u'); }
+    function selecao_saturno_r() { sel_saturno.push('r'); }
+    function selecao_saturno_n() { sel_saturno.push('n'); }
+    function selecao_saturno_o() { sel_saturno.push('o'); }
+
+    // palavra estrelas
+    var estrelas = ['e', 's', 't', 'r', 'e', 'l', 'a', 's'];
+    var sel_estrelas = [];
+
+    function selecao_estrelas_e1() { sel_estrelas.push('e'); }
+    function selecao_estrelas_s() { sel_estrelas.push('s'); }
+    function selecao_estrelas_t() { sel_estrelas.push('t'); }
+    function selecao_estrelas_r() { sel_estrelas.push('r'); }
+    function selecao_estrelas_e2() { sel_estrelas.push('e'); }
+    function selecao_estrelas_l() { sel_estrelas.push('l'); }
+    function selecao_estrelas_a() { sel_estrelas.push('a'); }
+    function selecao_estrelas_s2() { sel_estrelas.push('s'); }
+
+    // palavra cometas
+    var cometas = ['c', 'o', 'm', 'e', 't', 'a', 's'];
+    var sel_cometas = [];
+
+    function selecao_cometas_c() { sel_cometas.push('c'); }
+    function selecao_cometas_o() { sel_cometas.push('o'); }
+    function selecao_cometas_m() { sel_cometas.push('m'); }
+    function selecao_cometas_e() { sel_cometas.push('e'); }
+    function selecao_cometas_t() { sel_cometas.push('t'); }
+    function selecao_cometas_a() { sel_cometas.push('a'); }
+    function selecao_cometas_s() { sel_cometas.push('s'); }
+
+    // palavra constelação
+    var constelacao = ['c', 'o', 'n', 's', 't', 'e', 'l', 'a', 'c', 'a', 'o'];
+    var sel_constelacao = [];
+
+    function selecao_const_c() { sel_constelacao.push('c'); }
+    function selecao_const_o() { sel_constelacao.push('o'); }
+    function selecao_const_n() { sel_constelacao.push('n'); }
+    function selecao_const_s() { sel_constelacao.push('s'); }
+    function selecao_const_t() { sel_constelacao.push('t'); }
+    function selecao_const_e() { sel_constelacao.push('e'); }
+    function selecao_const_l() { sel_constelacao.push('l'); }
+    function selecao_const_a1() { sel_constelacao.push('a'); }
+    function selecao_const_c2() { sel_constelacao.push('c'); }
+    function selecao_const_a2() { sel_constelacao.push('a'); }
+    function selecao_const_o2() { sel_constelacao.push('o'); }
+
+    // palavra astronauta
+    var astronauta = ['a', 's', 't', 'r', 'o', 'n', 'a', 'u', 't', 'a'];
+    var sel_astronauta = [];
+
+    function selecao_astro_a1() { sel_astronauta.push('a'); }
+    function selecao_astro_s() { sel_astronauta.push('s'); }
+    function selecao_astro_t1() { sel_astronauta.push('t'); }
+    function selecao_astro_r() { sel_astronauta.push('r'); }
+    function selecao_astro_o() { sel_astronauta.push('o'); }
+    function selecao_astro_n() { sel_astronauta.push('n'); }
+    function selecao_astro_a2() { sel_astronauta.push('a'); }
+    function selecao_astro_u() { sel_astronauta.push('u'); }
+    function selecao_astro_t2() { sel_astronauta.push('t'); }
+    function selecao_astro_a3() { sel_astronauta.push('a'); }
+
+    // palavra universo
+    var universo = ['u', 'n', 'i', 'v', 'e', 'r', 's', 'o'];
+    var sel_universo = [];
+
+    function selecao_universo_u() { sel_universo.push('u'); }
+    function selecao_universo_n() { sel_universo.push('n'); }
+    function selecao_universo_i() { sel_universo.push('i'); }
+    function selecao_universo_v() { sel_universo.push('v'); }
+    function selecao_universo_e() { sel_universo.push('e'); }
+    function selecao_universo_r() { sel_universo.push('r'); }
+    function selecao_universo_s() { sel_universo.push('s'); }
+    function selecao_universo_o() { sel_universo.push('o'); }
+
+    // palavra gravidade
+    var gravidade = ['g', 'r', 'a', 'v', 'i', 'd', 'a', 'd', 'e'];
+    var sel_gravidade = [];
+
+    function selecao_grav_g() { sel_gravidade.push('g'); }
+    function selecao_grav_r() { sel_gravidade.push('r'); }
+    function selecao_grav_a1() { sel_gravidade.push('a'); }
+    function selecao_grav_v() { sel_gravidade.push('v'); }
+    function selecao_grav_i() { sel_gravidade.push('i'); }
+    function selecao_grav_d1() { sel_gravidade.push('d'); }
+    function selecao_grav_a2() { sel_gravidade.push('a'); }
+    function selecao_grav_d2() { sel_gravidade.push('d'); }
+    function selecao_grav_e() { sel_gravidade.push('e'); }
+
+    // palavra telescópio
+    var telescopio = ['t', 'e', 'l', 'e', 's', 'c', 'o', 'p', 'i', 'o'];
+    var sel_telescopio = [];
+
+    function selecao_tel_t() { sel_telescopio.push('t'); }
+    function selecao_tel_e1() { sel_telescopio.push('e'); }
+    function selecao_tel_l() { sel_telescopio.push('l'); }
+    function selecao_tel_e2() { sel_telescopio.push('e'); }
+    function selecao_tel_s() { sel_telescopio.push('s'); }
+    function selecao_tel_c() { sel_telescopio.push('c'); }
+    function selecao_tel_o1() { sel_telescopio.push('o'); }
+    function selecao_tel_p() { sel_telescopio.push('p'); }
+    function selecao_tel_i() { sel_telescopio.push('i'); }
+    function selecao_tel_o2() { sel_telescopio.push('o'); }
+
+    // palavra nasa
+    var nasa = ['n', 'a', 's', 'a'];
+    var sel_nasa = [];
+
+    function selecao_nasa_n() { sel_nasa.push('n'); }
+    function selecao_nasa_a1() { sel_nasa.push('a'); }
+    function selecao_nasa_s() { sel_nasa.push('s'); }
+    function selecao_nasa_a2() { sel_nasa.push('a'); }
+
+    // palavra planetas
+    // palavra planetas
+    var planetas = ['p', 'l', 'a', 'n', 'e', 't', 'a', 's'];
+    var sel_planetas = [];
+
+    function selecao_planetas_p() { sel_planetas.push('p'); }
+    function selecao_planetas_l() { sel_planetas.push('l'); }
+    function selecao_planetas_a() { sel_planetas.push('a'); }
+    function selecao_planetas_n() { sel_planetas.push('n'); }
+    function selecao_planetas_e() { sel_planetas.push('e'); }
+    function selecao_planetas_t() { sel_planetas.push('t'); }
+    function selecao_planetas_a2() { sel_planetas.push('a'); }
+    function selecao_planetas_s() { sel_planetas.push('s'); }
+
 
 
     function verificar() {
         palavras_encontradas.innerHTML = '';
+
+        //Lua 
         var selecionado = true;
-        //Lua
         for (let index = 0; index < lua.length; index++) {
             if (lua[index] != jogo[index]) {
                 selecionado = false;
@@ -200,7 +340,164 @@
         if (selecionado2 == true) {
             palavras_encontradas.innerHTML += '<br> Galaxia';
         }
-        jogo = [];
+
+        //Terra
+        var selecionado_terra = true;
+        for (let index = 0; index < terra.length; index++) {
+            if (terra[index] != sel_terra[index]) {
+                selecionado_terra = false;
+                break;
+            }
+        }
+        if (selecionado_terra == true) {
+            palavras_encontradas.innerHTML += '<br> terra';
+        }
+
+        //Sol
+        var selecionado_sol = true;
+        for (let index = 0; index < sol.length; index++) {
+            if (sol[index] != sel_sol[index]) {
+                selecionado_sol = false;
+                break;
+            }
+        }
+        if (selecionado_sol == true) {
+            palavras_encontradas.innerHTML += '<br> sol';
+        }
+
+        //Marte
+        var selecionado_marte = true;
+        for (let index = 0; index < marte.length; index++) {
+            if (marte[index] != sel_marte[index]) {
+                selecionado_marte = false;
+                break;
+            }
+        }
+        if (selecionado_marte == true) {
+            palavras_encontradas.innerHTML += '<br> marte';
+        }
+
+        //Saturno
+        var selecionado_saturno = true;
+        for (let index = 0; index < saturno.length; index++) {
+            if (saturno[index] != sel_saturno[index]) {
+                selecionado_saturno = false;
+                break;
+            }
+        }
+        if (selecionado_saturno == true) {
+            palavras_encontradas.innerHTML += '<br> saturno';
+        }
+
+        //Estrelas
+        var selecionado_estrelas = true;
+        for (let index = 0; index < estrelas.length; index++) {
+            if (estrelas[index] != sel_estrelas[index]) {
+                selecionado_estrelas = false;
+                break;
+            }
+        }
+        if (selecionado_estrelas == true) {
+            palavras_encontradas.innerHTML += '<br> estrelas';
+        }
+
+        //Cometas
+        var selecionado_cometas = true;
+        for (let index = 0; index < cometas.length; index++) {
+            if (cometas[index] != sel_cometas[index]) {
+                selecionado_cometas = false;
+                break;
+            }
+        }
+        if (selecionado_cometas == true) {
+            palavras_encontradas.innerHTML += '<br> cometas';
+        }
+
+        //Constalação
+        var selecionado_const = true;
+        for (let index = 0; index < constelacao.length; index++) {
+            if (constelacao[index] != sel_constelacao[index]) {
+                selecionado_const = false;
+                break;
+            }
+        }
+        if (selecionado_const == true) {
+            palavras_encontradas.innerHTML += '<br> constelacao';
+        }
+
+        //Astronalta
+        var selecionado_astro = true;
+        for (let index = 0; index < astronauta.length; index++) {
+            if (astronauta[index] != sel_astronauta[index]) {
+                selecionado_astro = false;
+                break;
+            }
+        }
+        if (selecionado_astro == true) {
+            palavras_encontradas.innerHTML += '<br> astronauta';
+        }
+
+        //Universo
+        var selecionado_universo = true;
+        for (let index = 0; index < universo.length; index++) {
+            if (universo[index] != sel_universo[index]) {
+                selecionado_universo = false;
+                break;
+            }
+        }
+        if (selecionado_universo == true) {
+            palavras_encontradas.innerHTML += '<br> universo';
+        }
+
+        //Gravidade
+        var selecionado_grav = true;
+        for (let index = 0; index < gravidade.length; index++) {
+            if (gravidade[index] != sel_gravidade[index]) {
+                selecionado_grav = false;
+                break;
+            }
+        }
+        if (selecionado_grav == true) {
+            palavras_encontradas.innerHTML += '<br> gravidade';
+        }
+
+        //Telescopio
+        var selecionado_tel = true;
+        for (let index = 0; index < telescopio.length; index++) {
+            if (telescopio[index] != sel_telescopio[index]) {
+                selecionado_tel = false;
+                break;
+            }
+        }
+        if (selecionado_tel == true) {
+            palavras_encontradas.innerHTML += '<br> telescopio';
+        }
+
+        //Nasa
+        var selecionado_nasa = true;
+        for (let index = 0; index < nasa.length; index++) {
+            if (nasa[index] != sel_nasa[index]) {
+                selecionado_nasa = false;
+                break;
+            }
+        }
+        if (selecionado_nasa == true) {
+            palavras_encontradas.innerHTML += '<br> nasa';
+        }
+
+        // Planetas
+        var selecionado_planetas = true;
+
+        for (let index = 0; index < planetas.length; index++) {
+            if (planetas[index] != sel_planetas[index]) {
+                selecionado_planetas = false;
+                break;
+            }
+        }
+
+        if (selecionado_planetas == true) {
+            palavras_encontradas.innerHTML += '<br> Planetas';
+        }
     }
 </script>
 
