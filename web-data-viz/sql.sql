@@ -90,11 +90,40 @@ fk_usuario int,
 constraint fk_usuario_registros
 foreign key (fk_usuario)
 references usuario(id),
-acertos_totais int
+acertos_totais int,
+qtd_partidas int
 );
 
 select * from registros_totais;
 
+create table palavras(
+idPalavra int primary key auto_increment,
+nome varchar(50)
+);
 
+create table partida(
+idPartidas int primary key auto_increment,
+palavras_encontradas int,
+tempo int,
+fk_usuario int,
+fk_registros int,
+fk_palavras int,
+constraint fk_usuario_partida
+foreign key (fk_usuario)
+references usuario(id),
+constraint fk_registros_partida
+foreign key (fk_registros)
+references registros_totais (id_registros),
+constraint fk_palavras_partida
+foreign key (fk_palavras)
+references palavras(idPalavra)
+);
+
+
+create table partidas(
+idPartidas int primary key auto_increment,
+palavras_encontradas int,
+tempo int 
+);
 
 
