@@ -13,6 +13,16 @@ button.letras {
   box-shadow: 0 0 5px #4ea4ff;
 } 
 
+button.letras.a {
+  width: 25px;
+  height: 25px;
+  background: #5905a7;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 0 5px #4ea4ff;
+} 
+
 .marcada {
   background: #4ea4ff;
   color: #000;

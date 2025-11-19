@@ -128,29 +128,90 @@
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for (let index = 0; index < 15; index++) {
+
+        /*NASA*/
+        if (index == 8) {
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_n()"> N </button>';
+            
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_gravidade()"> A </button>';
+            
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_s()"> S </button>';
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_a2()"> A </button>';
+        }
+        
+        function selecao_nasa_gravidade() {
+            selecao_grav_a1();
+            selecao_nasa_a1();
+        }
+
+        /*SOL*/
+        if (index == 5) {
+            div_msg4.innerHTML += '<button class="letras" onclick="selecao_sol_s()"> S </button> <button class="letras" onclick="selecao_sol_o()"> O </button> <button class="letras" onclick="selecao_sol_l()"> L </button>';
+        }
+        /*MARTE*/
+        if (index == 4) {
+            div_msg2.innerHTML += '<button class="letras" onclick="selecao_marte_m()"> M </button>                        <button class="letras" onclick="selecao_marte_a()"> A </button> <button class="letras" onclick="selecao_marte_r()"> R </button> <button class="letras" onclick="selecao_marte_t()"> T </button> <button class="letras" onclick="selecao_marte_e()"> E </button>';
+        }
       
-        /*LUA*/
+        /*TERRA*/
         if (index == 1) {
-            div_msg.innerHTML += '<button class="letras" onclick="selecao_lua_l"> L </button>';
-            div_msg2.innerHTML += '<button class="letras" onclick="selecao_lua_u"> U </button>';
-            div_msg3.innerHTML += '<button class="letras" onclick="selecao_lua_a"> A </button>';
+            div_msg4.innerHTML += '<button class="letras" onclick="selecao_terra_t()"> T </button>';
+            div_msg5.innerHTML += '<button class="letras" onclick="selecao_terra_e()"> E </button>';
+            div_msg6.innerHTML += '<button class="letras" onclick="selecao_terra_r1()"> R </button>';
+            div_msg7.innerHTML += '<button class="letras" onclick="selecao_terra_r2()"> R </button>';
+            div_msg8.innerHTML += '<button class="letras" onclick="selecao_terra_a()"> A </button>';
+            
+        }
+        /*LUA*/
+        if (index == 0) {
+            div_msg.innerHTML += '<button class="letras" onclick="selecao_lua_l()"> L </button>';
+            div_msg2.innerHTML += '<button class="letras" onclick="selecao_lua_u()"> U </button>';
+            div_msg3.innerHTML += '<button class="letras" onclick="selecao_lua_a()"> A </button>';
         }
 
         /*GRAVIDADE*/
-        if (index == 9) {
-            div_msg.innerHTML += '<button class="letras" onclick="selecao_grav_g()"> G </button>';
-            div_msg2.innerHTML += '<button class="letras" onclick="selecao_grav_r()"> R </button>';
-            div_msg3.innerHTML += '<button class="letras" onclick="selecao_grav_a()"> A </button>';
-        }
         if (index == 10) {
-            div_msg4.innerHTML += '<button class="letras" onclick="selecao_grav_v()"> V </button>';
-            div_msg5.innerHTML += '<button class="letras" onclick="selecao_grav_i()"> I </button>';
-            div_msg6.innerHTML += '<button class="letras" onclick="selecao_grav_d()"> D </button>';
-            div_msg7.innerHTML += '<button class="letras" onclick="selecao_grav_a2()"> A </button>';
-            div_msg8.innerHTML += '<button class="letras" onclick="selecao_grav_d()"> D </button>';
-            div_msg9.innerHTML += '<button class="letras" onclick="selecao_grav_e()"> E </button>';
+                 div_msg.innerHTML += '<button class="letras a " onclick="selecao_grav_g()"> G </button>';
+                 
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_grav_e()"> E </button>';
+        }
+        if (index == 4) {
+            div_msg2.innerHTML += '<button class="letras a " onclick="selecao_grav_r()"> R </button>'; 
         }
 
+        if (index == 6) {
+            div_msg4.innerHTML += '<button class="letras a" onclick="selecao_grav_v()"> V </button>';
+        }
+        if (index == 8) {
+            
+        }
+        if (index == 9) {
+
+       
+            
+            div_msg5.innerHTML += '<button class="letras a" onclick="selecao_grav_i()"> I </button>';
+            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_grav_d1()"> D </button>';
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_grav_a2()"> A </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_grav_d2()"> D </button>';
+        }
+
+        /*Constelação*/
+        if (index == 2) {
+            div_msg2.innerHTML += '<button class="letras" onclick="selecao_const_c()"> C </button>';
+            div_msg3.innerHTML += '<button class="letras" onclick="selecao_const_o()"> O </button>';
+            div_msg4.innerHTML += '<button class="letras" onclick="selecao_const_n()"> N </button>';
+            div_msg5.innerHTML += '<button class="letras" onclick="selecao_const_s()"> S </button>';
+            div_msg6.innerHTML += '<button class="letras" onclick="selecao_const_t()"> T </button>';
+            div_msg7.innerHTML += '<button class="letras" onclick="selecao_const_e()"> E </button>';
+            div_msg8.innerHTML += '<button class="letras" onclick="selecao_const_l()"> L </button>';
+           
+        }
+        if (index == 3) {
+             div_msg9.innerHTML += '<button class="letras" onclick="selecao_const_a1()"> A </button>';
+            div_msg10.innerHTML += '<button class="letras" onclick="selecao_const_c2()"> C </button>';
+            div_msg11.innerHTML += '<button class="letras" onclick="selecao_const_a2()"> A </button>';
+            div_msg12.innerHTML += '<button class="letras" onclick="selecao_const_o2()"> O </button>';
+        }
         /* coluna 1*/
         var numero = Math.floor(Math.random() * 26);
         var letra = alfabeto[numero];
@@ -590,6 +651,7 @@
             }
         }
         if (selecionado_nasa == true) {
+            
             palavras_encontradas.innerHTML += '<br> nasa';
         }
 
