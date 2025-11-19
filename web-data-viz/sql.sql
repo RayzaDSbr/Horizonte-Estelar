@@ -84,5 +84,17 @@ senha varchar(30)
 
 select * from usuario;
 
+create table registros_totais(
+id_registros int primary key auto_increment,
+fk_usuario int,
+constraint fk_usuario_registros
+foreign key (fk_usuario)
+references usuario(id),
+acertos_totais int
+);
+
+select * from registros_totais;
+
+
 
 

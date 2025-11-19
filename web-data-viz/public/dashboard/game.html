@@ -500,13 +500,11 @@
             var enviandoUmNumeroProBanco = 1;
 
             fetch("/palavras/cadastrar", {
-                method: "POST", // Tipo de requisição (POST para cadastro)
+                method: "POST",
                 headers: {
-                    "Content-Type": "application/json", // Indica que o corpo é JSON
+                    "Content-Type": "application/json", 
                 },
                 body: JSON.stringify({
-                    // O nome do atributo no JSON deve ser o mesmo que você espera 
-                    // no seu carroController.js (var nome = req.body.nome;)
                     acertos_totais: enviandoUmNumeroProBanco
                 }),
             })
@@ -522,7 +520,7 @@
                         }).catch(erro => {
                            console.log('n foi f');
                         });
-                        throw new Error("Erro ao cadastrar carro!");
+                        throw new Error("Erro");
                     }
                 })
                 .catch(function (erro) {
