@@ -132,13 +132,13 @@
         /*NASA*/
         if (index == 8) {
             div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_n()"> N </button>';
-            
+
             div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_gravidade()"> A </button>';
-            
+
             div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_s()"> S </button>';
             div_msg3.innerHTML += '<button class="letras a" onclick="selecao_nasa_a2()"> A </button>';
         }
-        
+
         function selecao_nasa_gravidade() {
             selecao_grav_a1();
             selecao_nasa_a1();
@@ -152,7 +152,7 @@
         if (index == 4) {
             div_msg2.innerHTML += '<button class="letras" onclick="selecao_marte_m()"> M </button>                        <button class="letras" onclick="selecao_marte_a()"> A </button> <button class="letras" onclick="selecao_marte_r()"> R </button> <button class="letras" onclick="selecao_marte_t()"> T </button> <button class="letras" onclick="selecao_marte_e()"> E </button>';
         }
-      
+
         /*TERRA*/
         if (index == 1) {
             div_msg4.innerHTML += '<button class="letras" onclick="selecao_terra_t()"> T </button>';
@@ -160,7 +160,7 @@
             div_msg6.innerHTML += '<button class="letras" onclick="selecao_terra_r1()"> R </button>';
             div_msg7.innerHTML += '<button class="letras" onclick="selecao_terra_r2()"> R </button>';
             div_msg8.innerHTML += '<button class="letras" onclick="selecao_terra_a()"> A </button>';
-            
+
         }
         /*LUA*/
         if (index == 0) {
@@ -171,24 +171,24 @@
 
         /*GRAVIDADE*/
         if (index == 10) {
-                 div_msg.innerHTML += '<button class="letras a " onclick="selecao_grav_g()"> G </button>';
-                 
+            div_msg.innerHTML += '<button class="letras a " onclick="selecao_grav_g()"> G </button>';
+
             div_msg9.innerHTML += '<button class="letras a" onclick="selecao_grav_e()"> E </button>';
         }
         if (index == 4) {
-            div_msg2.innerHTML += '<button class="letras a " onclick="selecao_grav_r()"> R </button>'; 
+            div_msg2.innerHTML += '<button class="letras a " onclick="selecao_grav_r()"> R </button>';
         }
 
         if (index == 6) {
             div_msg4.innerHTML += '<button class="letras a" onclick="selecao_grav_v()"> V </button>';
         }
         if (index == 8) {
-            
+
         }
         if (index == 9) {
 
-       
-            
+
+
             div_msg5.innerHTML += '<button class="letras a" onclick="selecao_grav_i()"> I </button>';
             div_msg6.innerHTML += '<button class="letras a" onclick="selecao_grav_d1()"> D </button>';
             div_msg7.innerHTML += '<button class="letras a" onclick="selecao_grav_a2()"> A </button>';
@@ -204,10 +204,10 @@
             div_msg6.innerHTML += '<button class="letras" onclick="selecao_const_t()"> T </button>';
             div_msg7.innerHTML += '<button class="letras" onclick="selecao_const_e()"> E </button>';
             div_msg8.innerHTML += '<button class="letras" onclick="selecao_const_l()"> L </button>';
-           
+
         }
         if (index == 3) {
-             div_msg9.innerHTML += '<button class="letras" onclick="selecao_const_a1()"> A </button>';
+            div_msg9.innerHTML += '<button class="letras" onclick="selecao_const_a1()"> A </button>';
             div_msg10.innerHTML += '<button class="letras" onclick="selecao_const_c2()"> C </button>';
             div_msg11.innerHTML += '<button class="letras" onclick="selecao_const_a2()"> A </button>';
             div_msg12.innerHTML += '<button class="letras" onclick="selecao_const_o2()"> O </button>';
@@ -496,7 +496,48 @@
         }
         if (selecionado == true) {
             palavras_encontradas.innerHTML += '<br> lua';
+
+            var enviandoUmNumeroProBanco = 1;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST", // Tipo de requisição (POST para cadastro)
+                headers: {
+                    "Content-Type": "application/json", // Indica que o corpo é JSON
+                },
+                body: JSON.stringify({
+                    // O nome do atributo no JSON deve ser o mesmo que você espera 
+                    // no seu carroController.js (var nome = req.body.nome;)
+                    acertos_totais: enviandoUmNumeroProBanco
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                           console.log('n foi f');
+                        });
+                        throw new Error("Erro ao cadastrar carro!");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
+
+
+
+
+
         }
+
+
         //Galaxia
         var selecionado2 = true;
         for (let index = 0; index < galaxia.length; index++) {
@@ -651,7 +692,7 @@
             }
         }
         if (selecionado_nasa == true) {
-            
+
             palavras_encontradas.innerHTML += '<br> nasa';
         }
 
