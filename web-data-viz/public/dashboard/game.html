@@ -150,23 +150,45 @@
         }
         /*MARTE*/
         if (index == 4) {
-            div_msg2.innerHTML += '<button class="letras" onclick="selecao_marte_m()"> M </button>                        <button class="letras" onclick="selecao_marte_a()"> A </button> <button class="letras" onclick="selecao_marte_r()"> R </button> <button class="letras" onclick="selecao_marte_t()"> T </button> <button class="letras" onclick="selecao_marte_e()"> E </button>';
+            div_msg2.innerHTML += '<button class="letras a" onclick="selecao_marte_m()"> M </button>                        <button class="letras a" onclick="selecao_marte_a()"> A </button> <button class="letras a" onclick="selecao_marte_r()"> R </button> <button class="letras a" onclick="selecao_marte_t()"> T </button> <button class="letras" onclick="selecao_marte_e()"> E </button>';
         }
 
         /*TERRA*/
         if (index == 1) {
-            div_msg4.innerHTML += '<button class="letras" onclick="selecao_terra_t()"> T </button>';
-            div_msg5.innerHTML += '<button class="letras" onclick="selecao_terra_e()"> E </button>';
-            div_msg6.innerHTML += '<button class="letras" onclick="selecao_terra_r1()"> R </button>';
-            div_msg7.innerHTML += '<button class="letras" onclick="selecao_terra_r2()"> R </button>';
-            div_msg8.innerHTML += '<button class="letras" onclick="selecao_terra_a()"> A </button>';
+            div_msg4.innerHTML += '<button class="letras a" onclick="selecao_terra_t()"> T </button>';
+            div_msg5.innerHTML += '<button class="letras a" onclick="selecao_terra_e()"> E </button>';
+            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_terra_r1()"> R </button>';
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_terra_r2()"> R </button>';
+            
+
+        }
+
+        /*GALAXIA*/
+        if (index == 0) {
+            div_msg8.innerHTML +='<button class="letras a" onclick="selecao_galaxia_g()"> G </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_terra()"> A </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> L </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> A </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> X </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> I </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> A </button>';
+
+        }
+
+        function sel_galaxia_const() {
+            selecao_const_l();
+            selecao_galaxia_l();
+        }
+        function sel_galaxia_terra() {
+            selecao_terra_a();
+            selecao_galaxia_a1();
 
         }
         /*LUA*/
         if (index == 0) {
-            div_msg.innerHTML += '<button class="letras" onclick="selecao_lua_l()"> L </button>';
-            div_msg2.innerHTML += '<button class="letras" onclick="selecao_lua_u()"> U </button>';
-            div_msg3.innerHTML += '<button class="letras" onclick="selecao_lua_a()"> A </button>';
+            div_msg.innerHTML += '<button class="letras a" onclick="selecao_lua_l()"> L </button>';
+            div_msg2.innerHTML += '<button class="letras a" onclick="selecao_lua_u()"> U </button>';
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_lua_a()"> A </button>';
         }
 
         /*GRAVIDADE*/
@@ -196,21 +218,21 @@
         }
 
         /*Constelação*/
-        if (index == 2) {
-            div_msg2.innerHTML += '<button class="letras" onclick="selecao_const_c()"> C </button>';
-            div_msg3.innerHTML += '<button class="letras" onclick="selecao_const_o()"> O </button>';
-            div_msg4.innerHTML += '<button class="letras" onclick="selecao_const_n()"> N </button>';
-            div_msg5.innerHTML += '<button class="letras" onclick="selecao_const_s()"> S </button>';
-            div_msg6.innerHTML += '<button class="letras" onclick="selecao_const_t()"> T </button>';
-            div_msg7.innerHTML += '<button class="letras" onclick="selecao_const_e()"> E </button>';
-            div_msg8.innerHTML += '<button class="letras" onclick="selecao_const_l()"> L </button>';
+        if (index == 1) {
+            div_msg2.innerHTML += '<button class="letras a" onclick="selecao_const_c()"> C </button>';
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_const_o()"> O </button>';
+            div_msg4.innerHTML += '<button class="letras a" onclick="selecao_const_n()"> N </button>';
+            div_msg5.innerHTML += '<button class="letras a" onclick="selecao_const_s()"> S </button>';
+            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_const_t()"> T </button>';
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_const_e()"> E </button>';
+           
 
         }
-        if (index == 3) {
-            div_msg9.innerHTML += '<button class="letras" onclick="selecao_const_a1()"> A </button>';
-            div_msg10.innerHTML += '<button class="letras" onclick="selecao_const_c2()"> C </button>';
-            div_msg11.innerHTML += '<button class="letras" onclick="selecao_const_a2()"> A </button>';
-            div_msg12.innerHTML += '<button class="letras" onclick="selecao_const_o2()"> O </button>';
+        if (index == 2) {
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_const_a1()"> A </button>';
+            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_const_c2()"> C </button>';
+            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_const_a2()"> A </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_const_o2()"> O </button>';
         }
         /* coluna 1*/
         var numero = Math.floor(Math.random() * 26);
