@@ -61,115 +61,57 @@
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
-
+            
         </div>
 
         <div class="dash">
-            <p class="tit">Indicadores Caça-palavras</p>
-            <div class="graficos_flex">
-                <div class="caixa_graficos indicador1">
-                    <p class="titulo">Desempenho </p>
-                    <p class="titulo"> Quantidade de Partidas Jogadas</p>
-                </div>
-
-                <div class="caixa_graficos indicador2">
-                    <p class="titulo">Tentativas incorretas</p>
-                </div>
-
-                <div class="caixa_graficos indicador2">
-                    <div id="msg" class="titulo"> ddddd</div>
-                </div>
-
-            </div>
-            <div class="graficos_flex">
-                <div class="caixa_graficos indicador3">
-                   <canvas id="barras"></canvas>
-                </div>
-                <div class="caixa_graficos indicador4">
-                    <canvas id="pizza"> </canvas>
-                </div>
-            </div>
-
-            <div class="graficos_flex">
-                <div class="caixa_graficos indicador5">
-                    <p class="titulo"> Palavra mais facil x mais dificil</p>
-                </div>
-
-                <div class="caixa_graficos indicador6">
-                    <p class="titulo"> Historico de partidas</p>
-                </div>
-            </div>
+            <canvas id="pizza"> </canvas>
         </div>
 
 </body>
 
 </html>
 <script>
-
-
-    function obterDados() {
-    fetch('/palavras/listar')
-        .then(response => response.json())
-        .then(data => {
-            plotarGraficoPizza(data);
-        })
-        .catch(err => {
-            console.log(err);
-        });
-}
-
-var palavras_econtradas_pizza = [];
-
-
-function plotarGraficoPizza(dados) {
-    
-    // Limpa o array caso o gráfico recarregue
-    palavras_econtradas_pizza = [];
-
-    // Função para plotar o gráfico de barra
-
-  // Preenchendo os arrays com os dados
- for (var i = 0; i < dados.length; i++) {
-        palavras_econtradas_pizza.push(dados[i].votos);
-    }
-msg.innerHTML += palavras_econtradas_pizza;
-  // Capturando o elemento canvas pelo id 
-  /*var ctx = document.getElementById('barra').getContext('2d');
-  // Criando o gráfico de barra usando o Chart.js
-
-  var myChart = new Chart(ctx, {
-      type: 'bar', // Tipo de gráfico: barra
-      data: { // Dados para o gráfico
-          labels: 'blabla', // Rótulos no eixo X
-          datasets: [{
-              label: 'Votos', // Nome do conjunto de dados
-              data: dados, // Dados dos votos
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)', // Cor de fundo das barras
-              ],
-              borderColor: [
-                  'rgba(255, 99, 132, 1)', // Cor da borda das barras
-              ],
-              borderWidth: 1 // Largura da borda das barras
-          }]
-      },
-  });
-}*/
-
-    var ctx = document.getElementById('pizza');
-    
-    new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: 15, 
-            datasets: [{
-                label: 'Palavras encontradas',
-                data: palavras_econtradas_pizza
-            }]
+   
+var ctx = document.getElementById('pizza');
+new Chart(ctx, {
+          type: 'pie',
+    data: {
+      labels: ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'],
+      datasets: [{
+        label: 'Vendas',
+        data: [12500, 10000, 3000, 5000, 8000],
+      }]
+    },
+    options: {
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: context => {
+              return ' R$ ' + context.parsed.toLocaleString('pt-BR', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+              });
+            }
+          }
+        },
+        legend: {
+          position: 'left',
+          labels: {
+            font: { size: 18 }
+          },
+        },
+        title: {
+          display: true,
+          text: 'Total de Vendas por Produto',
+          font: { size: 24 },
+          padding: { bottom: 30 }
         }
-    });
-}
-
+      },
+      responsive: false,
+      maintainAspectRatio: true
+    }
+  });
 </script>
 <!--<script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;

@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!--FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- <body onload=" atualizarFeed()"> -->
@@ -497,7 +497,7 @@
         if (selecionado == true) {
             palavras_encontradas.innerHTML += '<br> lua';
 
-            var enviandoUmNumeroProBanco = 1;
+            var fk_lua = 1;
 
             fetch("/palavras/cadastrar", {
                 method: "POST",
@@ -505,7 +505,7 @@
                     "Content-Type": "application/json", 
                 },
                 body: JSON.stringify({
-                    acertos_totais: enviandoUmNumeroProBanco
+                    palavras_encontradas: fk_lua
                 }),
             })
                 .then(function (resposta) {
@@ -528,11 +528,6 @@
                 });
 
             return false;
-
-
-
-
-
         }
 
 
@@ -692,6 +687,38 @@
         if (selecionado_nasa == true) {
 
             palavras_encontradas.innerHTML += '<br> nasa';
+
+            var fk_nasa = 15;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json", 
+                },
+                body: JSON.stringify({
+                    palavras_encontradas:fk_nasa
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                           console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         // Planetas

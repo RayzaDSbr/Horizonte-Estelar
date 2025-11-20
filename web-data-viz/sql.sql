@@ -119,11 +119,27 @@ foreign key (fk_palavras)
 references palavras(idPalavra)
 );
 
+select * from partida;
 
-create table partidas(
-idPartidas int primary key auto_increment,
-palavras_encontradas int,
-tempo int 
-);
+select count(idPartidas) as qtd_partida from partida;
+
+insert into palavras(nome) values 
+('Lua'),
+('Galaxia'),
+('Saturno'),
+('Terra'),
+('Sol'),
+('Marte'),
+('Planetas'),
+('Estrelas'),
+('Cometas'),
+('Constelação'),
+('Astronalta'),
+('Universo'),
+('Gravidade'),
+('Telescopio'),
+('Nasa');
+
+select * from palavras;
 
 

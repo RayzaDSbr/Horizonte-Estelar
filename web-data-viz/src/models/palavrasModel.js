@@ -1,17 +1,21 @@
 var database = require("../database/config");
 
 function listar() {
-    var instrucao = `
-        SELECT * FROM registros_totais;
+    
+      var instrucao = `
+        select count(idPartidas) AS total_partidas from partida;;
     `;
+
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
-function cadastrar(acertos_totais) {
-    var instrucao = `
-        INSERT INTO registros_totais (acertos_totais) VALUES ('${acertos_totais}');
+function cadastrar(palavras_encontradas) {
+    
+     var instrucao = `
+        INSERT INTO partida (palavras_encontradas) VALUES ('${palavras_encontradas}');
     `;
+
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }

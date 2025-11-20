@@ -10,13 +10,13 @@ function listar(req, res) {
 }
 
 function cadastrar(req, res) {
-    var acertos_totais = req.body.acertos_totais;
+    var palavras_encontradas = req.body.palavras_encontradas;
 
-    if (acertos_totais == undefined) {
-        res.status(400).send("Seu acertos_totais está undefined!");
+    if (palavras_encontradas == undefined) {
+        res.status(400).send("Seu palavras_encontradas está undefined!");
     }
 
-    palavrasModel.cadastrar(acertos_totais).then(function(resposta){
+    palavrasModel.cadastrar(palavras_encontradas).then(function(resposta){
         res.status(200).send("enviado");
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);
