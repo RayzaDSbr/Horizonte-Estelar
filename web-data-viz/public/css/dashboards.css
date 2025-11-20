@@ -55,14 +55,14 @@ button.letras.a {
 }
 
 .caixa_graficos.indicador1 {
-  width: 300px;
-  height: 50px;
+  width: 900px;
+  height: 200px;
 
 }
 
 .caixa_graficos.indicador2 {
-  width: 150px;
-  height: 50px;
+  width: 573px;
+  height: 100px;
 
 }
 
@@ -107,7 +107,7 @@ p.boasVindas2 {
   font-size: 60px;
   color: aliceblue;
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 120px;
   text-shadow: 0 0 20px #b181dd;
 }
 

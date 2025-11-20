@@ -33,7 +33,7 @@
 
     <div class="janela">
         <div class="header-left">
-            <a href="dashboard.html">
+            <a href="cards.html">
                 <h1>Horizonte Estelar</h1>
             </a>
 
@@ -68,13 +68,9 @@
         <div class="dash">
             <p class="tit">Indicadores Caça-palavras</p>
             <div class="graficos_flex">
-                <div class="caixa_graficos indicador1">
-                    <p class="titulo">Desempenho </p>
-                    <p class="titulo"> Quantidade de Partidas Jogadas</p>
-                </div>
 
                 <div class="caixa_graficos indicador2">
-                    <p class="titulo">Tentativas incorretas</p>
+                    <div id="msg2" class="titulo"></div>
                 </div>
 
                 <div class="caixa_graficos indicador2">
@@ -83,24 +79,11 @@
 
             </div>
             <div class="graficos_flex">
-                <div class="caixa_graficos indicador3">
+                <div class="caixa_graficos indicador1">
+                    <canvas id="linha"> </canvas>
                 </div>
-                <div class="caixa_graficos indicador4">
-                    <canvas id="pizza"> </canvas>
-                </div>
+
             </div>
-
-            <div class="graficos_flex">
-                <div class="caixa_graficos indicador5">
-                    <p class="titulo"> Palavra mais facil x mais dificil</p>
-                </div>
-
-                <div class="caixa_graficos indicador6">
-                    <p class="titulo"> Historico de partidas</p>
-                </div>
-            </div>
-        </div>
-
 </body>
 
 </html>
@@ -118,7 +101,7 @@
                 console.log(err);
             })
 
-      
+
         // plotarGraficoPizza(dados); 
     }
 
@@ -136,19 +119,32 @@
             palavras_econtradas_pizza.push(dados[i]);
         }
 
+        var desempenho = (palavras_econtradas_pizza[0].total_partidas / 15) * 100
+
         msg.innerHTML = palavras_econtradas_pizza[0].total_partidas;
+        msg2.innerHTML = desempenho.toFixed(0) + '%';
+        //Calculos
 
-        var ctx = document.getElementById('pizza');
+        var palavras_escondidas = 15 - palavras_econtradas_pizza[0].total_partidas;
 
-        new Chart(ctx, {
-            type: 'pie',
+        var ctx = document.getElementById('linha').getContext('2d');
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
             data: {
-                labels: ['Palavras encontradas', 'Palavras que não'],
+                labels: ['Palavras Escondidas', 'Palavras Encontradas', 'Meta do Jogo'],
                 datasets: [{
-                    label: 'Palavras encontradas',
-                    data: [10, palavras_econtradas_pizza]
+                    label: 'Palavras',
+                    data: [palavras_escondidas, palavras_econtradas_pizza[0].total_partidas, 15],
+                    backgroundColor: [
+                        '#ffff',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                    ],
+                    borderWidth: 1
                 }]
-            }
+            },
         });
     }
 
