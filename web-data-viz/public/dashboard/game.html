@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!--FONT AWESOME-->
-   <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- <body onload=" atualizarFeed()"> -->
@@ -127,7 +127,114 @@
     /* Criando as letras aleatorias */
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    for (let index = 0; index < 15; index++) {
+    for (let index = 0; index < 16; index++) {
+        /*ASTRONALTA*/
+        if (index == 6) {
+              div_msg12.innerHTML += '<button class="letras a" onclick="selecao_astro_a1()"> A </button>';
+              
+        }
+        if (index == 8) {
+             div_msg8.innerHTML += '<button class="letras a" onclick="selecao_astro_o()"> O </button>';
+        }
+        if (index == 10) {
+          div_msg4.innerHTML += '<button class="letras a" onclick="selecao_astro_t2()"> T </button>';   
+            div_msg3.innerHTML += '<button class="letras a" onclick="selecao_astro_a3()"> A </button>';
+        }
+        if (index == 11) {
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_astro_r()"> R </button>';
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_astro_n()"> N </button>';
+        }
+        if (index == 12) {
+          
+            
+          
+            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_astro_a2()"> A </button>';
+           
+           
+            
+            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_astro_t1()"> T </button>';
+            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_astro_s()"> S </button>';
+          
+        }
+        if (index == 13) {
+              div_msg5.innerHTML += '<button class="letras a" onclick="selecao_astro_u()"> U </button>';
+        }
+        /*PLANETAS*/
+        if (index == 4) {
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_planetas_a2()"> A </button>';
+        }
+        if (index == 5) {
+             div_msg12.innerHTML += '<button class="letras a" onclick="selecao_planetas_n()"> N </button>';
+        }
+        if (index == 10 ) {
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_planetas_p()"> P </button>';
+        }
+        if (index == 11) {
+            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_planetas_l()"> L </button>';
+            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_planetas_a1()"> A </button>';
+        }
+        if (index == 12) {
+            div_msg13.innerHTML += '<button class="letras a" onclick="selecao_planetas_e()"> E </button>';
+        }
+        if (index == 14) {
+            div_msg14.innerHTML += '<button class="letras a" onclick="selecao_planetas_t()"> T </button>';
+             div_msg16.innerHTML += '<button class="letras a" onclick="selecao_planetas_s()"> S </button>';
+        }
+        /*ESTRELAS*/
+        if (index == 5) {
+            selecao_estrelas_e1
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_e1()"> E </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_s()"> S </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_t()"> T </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_r()"> R </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_e2()"> E </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_l()"> L </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_a()"> A </button>';
+            div_msg17.innerHTML += '<button class="letras a" onclick="selecao_estrelas_s()"> S </button>';
+        }
+        /*TELESCOPIO*/
+        selecao_tel_o2
+        if (index == 1) {
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_o2()"> O </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_i()"> I </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_p()"> P </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_o1()"> O </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_c()"> C </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_s()"> S </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_e2()"> E </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_l()"> L </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_e1()"> E </button>';
+            div_msg15.innerHTML += '<button class="letras a" onclick="selecao_tel_t()"> T </button>';
+        }
+
+        /*UNIVERSO e COMETAS*/
+        if (index == 3) {
+            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_universo_u()"> U </button>';
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_universo_v()"> V </button>';
+            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_universo_e()"> E </button>';
+            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_universo_r()"> R </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="saturno_universo()"> S </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_cometas_a()"> A </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_cometas_t()"> T </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_cometas_e()"> E </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_cometas_m()"> M </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_cometas_o()"> O </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_cometas_c()"> C </button>';
+
+        } selecao_cometas_c
+
+        function saturno_universo() {
+            selecao_universo_s();
+            selecao_cometas_s();
+        }
+
+        if (index == 2) {
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_universo_n()"> N </button>';
+
+        }
+        if (index == 4) {
+            div_msg13.innerHTML += '<button class="letras a" onclick="selecao_universo_o()"> O </button>';
+        }
 
         /*NASA*/
         if (index == 8) {
@@ -145,12 +252,12 @@
         }
 
         /*SOL*/
-        if (index == 5) {
-            div_msg4.innerHTML += '<button class="letras" onclick="selecao_sol_s()"> S </button> <button class="letras" onclick="selecao_sol_o()"> O </button> <button class="letras" onclick="selecao_sol_l()"> L </button>';
+        if (index == 2) {
+            div_msg4.innerHTML += '<button class="letras a" onclick="selecao_sol_s()"> S </button> <button class="letras a" onclick="selecao_sol_o()"> O </button> <button class="letras a" onclick="selecao_sol_l()"> L </button>';
         }
         /*MARTE*/
-        if (index == 4) {
-            div_msg2.innerHTML += '<button class="letras a" onclick="selecao_marte_m()"> M </button>                        <button class="letras a" onclick="selecao_marte_a()"> A </button> <button class="letras a" onclick="selecao_marte_r()"> R </button> <button class="letras a" onclick="selecao_marte_t()"> T </button> <button class="letras" onclick="selecao_marte_e()"> E </button>';
+        if (index == 2) {
+            div_msg2.innerHTML += '<button class="letras a" onclick="selecao_marte_m()"> M </button>                        <button class="letras a" onclick="selecao_marte_a()"> A </button> <button class="letras a" onclick="selecao_marte_r()"> R </button> <button class="letras a" onclick="selecao_marte_t()"> T </button> <button class="letras a" onclick="selecao_marte_e()"> E </button>';
         }
 
         /*TERRA*/
@@ -159,20 +266,28 @@
             div_msg5.innerHTML += '<button class="letras a" onclick="selecao_terra_e()"> E </button>';
             div_msg6.innerHTML += '<button class="letras a" onclick="selecao_terra_r1()"> R </button>';
             div_msg7.innerHTML += '<button class="letras a" onclick="selecao_terra_r2()"> R </button>';
-            
+
 
         }
 
-        /*GALAXIA*/
+        /*GALAXIA E SATURNO*/
         if (index == 0) {
-            div_msg8.innerHTML +='<button class="letras a" onclick="selecao_galaxia_g()"> G </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_galaxia_g()"> G </button>';
             div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_terra()"> A </button>';
             div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> L </button>';
-            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> A </button>';
-            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> X </button>';
-            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> I </button>';
-            div_msg8.innerHTML += '<button class="letras a" onclick="sel_galaxia_const()"> A </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="galaxia_saturno()"> A </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_galaxia_x()"> X </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="galaxia_universo()"> I </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_galaxia_a3()"> A </button>';
 
+        }
+        function galaxia_universo() {
+            selecao_galaxia_i();
+            selecao_universo_i();
+        }
+        function galaxia_saturno() {
+            selecao_saturno_a();
+            selecao_galaxia_a2();
         }
 
         function sel_galaxia_const() {
@@ -195,26 +310,29 @@
         if (index == 10) {
             div_msg.innerHTML += '<button class="letras a " onclick="selecao_grav_g()"> G </button>';
 
-            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_grav_e()"> E </button>';
+
         }
         if (index == 4) {
             div_msg2.innerHTML += '<button class="letras a " onclick="selecao_grav_r()"> R </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_grav_d2()"> D </button>';
         }
 
         if (index == 6) {
             div_msg4.innerHTML += '<button class="letras a" onclick="selecao_grav_v()"> V </button>';
+
+
+        }
+        if (index == 7) {
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_grav_a2()"> A </button>';
         }
         if (index == 8) {
-
+            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_grav_d1()"> D </button>';
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_grav_e()"> E </button>';
         }
         if (index == 9) {
-
-
-
             div_msg5.innerHTML += '<button class="letras a" onclick="selecao_grav_i()"> I </button>';
-            div_msg6.innerHTML += '<button class="letras a" onclick="selecao_grav_d1()"> D </button>';
-            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_grav_a2()"> A </button>';
-            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_grav_d2()"> D </button>';
+
+
         }
 
         /*Constelação*/
@@ -225,62 +343,76 @@
             div_msg5.innerHTML += '<button class="letras a" onclick="selecao_const_s()"> S </button>';
             div_msg6.innerHTML += '<button class="letras a" onclick="selecao_const_t()"> T </button>';
             div_msg7.innerHTML += '<button class="letras a" onclick="selecao_const_e()"> E </button>';
-           
+            div_msg7.innerHTML += '<button class="letras a" onclick="selecao_saturno_s()"> S </button>';
+
 
         }
         if (index == 2) {
             div_msg9.innerHTML += '<button class="letras a" onclick="selecao_const_a1()"> A </button>';
-            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_const_c2()"> C </button>';
+            div_msg9.innerHTML += '<button class="letras a" onclick="selecao_saturno_t()"> T </button>';
+
             div_msg11.innerHTML += '<button class="letras a" onclick="selecao_const_a2()"> A </button>';
+            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_const_c2()"> C     </button>';
+            div_msg10.innerHTML += '<button class="letras a" onclick="selecao_saturno_u()"> U </button>';
+            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_saturno_r()"> R </button>';
             div_msg12.innerHTML += '<button class="letras a" onclick="selecao_const_o2()"> O </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_saturno_n()"> N </button>';
         }
-        /* coluna 1*/
+        if (index == 3) {
+            div_msg13.innerHTML += '<button class="letras a" onclick="selecao_saturno_o()"> O </button>';
+        }
+
         var numero = Math.floor(Math.random() * 26);
         var letra = alfabeto[numero];
-
-        div_msg.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 2*/
+        /* coluna 1*/
+        if (index <15) {
+             div_msg.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+        if (index < 8) {
+              /*coluna 8*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg8.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+       if (index < 9) {
+         /*coluna 2*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg2.innerHTML += '<button class="letras">' + letra + '</button> ';
 
+       }
+
+       if (index < 10) {
         /*coluna 3*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg3.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 4*/
+           /*coluna 4*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg4.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 5*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg5.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 6*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg6.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 7*/
+            
+       }
+       if (index < 11) {
+          /*coluna 7*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg7.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 8*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg8.innerHTML += '<button class="letras">' + letra + '</button> ';
 
         /*coluna 9*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg9.innerHTML += '<button class="letras">' + letra + '</button> ';
+       }
+       if (index < 12) {
+        /*coluna 6*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg6.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 10*/
+         /*coluna 10*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg10.innerHTML += '<button class="letras">' + letra + '</button> ';
@@ -289,38 +421,75 @@
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg11.innerHTML += '<button class="letras">' + letra + '</button> ';
+       }
+       if (index < 13) {
+      /*coluna 5*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg5.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 12*/
+      
+       }
+       if (index < 14) {
+         /*coluna 13*/
+        numero = Math.floor(Math.random() * 26);
+        letra = alfabeto[numero];
+        div_msg13.innerHTML += '<button class="letras">' + letra + '</button> ';
+       }
+       if (index < 6) {
+         /*coluna 12*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg12.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 13*/
+        /*coluna 15*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
-        div_msg13.innerHTML += '<button class="letras">' + letra + '</button> ';
+        div_msg15.innerHTML += '<button class="letras">' + letra + '</button> ';
+       }
+
+       
+
+       
+
+       
+
+
+        
+
+       
+
+        
+
+        
+
+       
 
         /*coluna 14*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg14.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 15*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg15.innerHTML += '<button class="letras">' + letra + '</button> ';
+        
 
         /*coluna 16*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg16.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        /*coluna 17*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg17.innerHTML += '<button class="letras">' + letra + '</button> ';
+        if (index <= 8) {
+            /*coluna 17*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg17.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+
+
+
 
     }
+
+
 
     //palavra lua
     var lua = ['l', 'u', 'a'];
@@ -524,7 +693,7 @@
             fetch("/palavras/cadastrar", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json", 
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     palavras_encontradas: fk_lua
@@ -540,7 +709,7 @@
                         resposta.json().then(json => {
                             console.log('n foi f');
                         }).catch(erro => {
-                           console.log('n foi f');
+                            console.log('n foi f');
                         });
                         throw new Error("Erro");
                     }
@@ -715,10 +884,10 @@
             fetch("/palavras/cadastrar", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json", 
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    palavras_encontradas:fk_nasa
+                    palavras_encontradas: fk_nasa
                 }),
             })
                 .then(function (resposta) {
@@ -731,7 +900,7 @@
                         resposta.json().then(json => {
                             console.log('n foi f');
                         }).catch(erro => {
-                           console.log('n foi f');
+                            console.log('n foi f');
                         });
                         throw new Error("Erro");
                     }
