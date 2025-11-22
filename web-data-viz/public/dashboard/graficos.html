@@ -76,6 +76,8 @@
                 </div>
 
                 <div class="caixa_graficos indicador2">
+                    <div class="titulo"> Quantidade de partidas: </div>
+                    <div id="kpi_partidas" class="titulo" ></div>
                     <div id="msg" class="titulo"> </div>
                 </div>
 
@@ -93,6 +95,8 @@
     
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+ 
+     kpi_partidas.innerHTML = sessionStorage.getItem('partidasJogadas');
     function obterDados() {
         fetch('/palavras/listar')
             .then(function (response) {

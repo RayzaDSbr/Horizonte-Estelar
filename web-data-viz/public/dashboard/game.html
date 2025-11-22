@@ -123,6 +123,12 @@
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+    var contador_partidas = 0;
+
+    var valor_para_armazenar = contador_partidas.toString();
+
+    var contador_session = sessionStorage.valor_para_armazenar;
+
     function esconder() {
         document.getElementById('caca_palavras').style.display = "none";
         document.getElementById('iniciar_game').style.display = "flex";
@@ -131,6 +137,12 @@
     function iniciar() {
         document.getElementById('caca_palavras').style.display = "flex";
         document.getElementById('iniciar_game').style.display = "none";
+
+        contador_partidas += 1;
+
+        valor_para_armazenar = contador_partidas.toString();
+        sessionStorage.setItem('partidasJogadas', valor_para_armazenar);
+
     }
     /* Criando as letras aleatorias */
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
