@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Megrim&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.encontradas{
+  font-size: 40px;
+  text-align: center;
+  margin: 0px 30px;
+  color: #fff;
+  text-shadow: 0 0 5px #ffee58, 0 0 10px #ffee58, 0 0 20px #ffee58, 0 0 40px #ffee58;
+}
+
+.flex2{
+    display: flex;
+    justify-content: flex-start;
+}
+.cacaPalavras{
+    margin: 4px 0px 4px 200px;
+}
+.t{
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0px 10px 200px;
+  color: #fff;
+  text-shadow: 0 0 5px #58b9ff, 0 0 10px #5890ff, 0 0 20px #58e0ff, 0 0 40px #5885ff;
+}
+
+.palavras_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.dash{
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: 20%;
+  background-image: url(img/fundo_dash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: auto;
+}
+button.letras {
+  width: 27px;
+  height: 27px;
+  background: #431259;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  border: none;
+  box-shadow: 0 0 5px #0e0f11;
+  color: aliceblue;
+  transition: 0.3s;
+  margin: 1px;
+} 
+button.letras:focus{
+    background-color: #0fc035;
+    transform: scale(1.03);
+}
+button.letras.a {
+  background: #431259;
+} 
+
+button.letras.a:focus{
+    background-color: #0fc035;
+    transform: scale(1.03);
+}
+.marcada {
+  background: #4ea4ff;
+  color: #000;
+  font-weight: bold;
+}
+
+.botao_verificar {
+  width: 100px;
+  padding: 9px;
+  margin: 10px;
+  border-radius: 10px;
+  border: white solid 1px ;
+  background-color: #2588cb;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao_verificar:hover {
+  background-color: #431259;
+  transform: scale(1.03);
+}

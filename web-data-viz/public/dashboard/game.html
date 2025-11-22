@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Dashboards</title>
+    <title> Caça Palavras</title>
 
 
     <link rel="stylesheet" href="./../css/dashboards.css">
     <link rel="stylesheet" href="./../css/estilo.css" />
+    <link rel="stylesheet" href="./../css/game.css">
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -63,81 +64,75 @@
         </div>
 
         <div class="dash">
+            <div style="display: flex; justify-content: flex-start;">
 
-            <div>
-                <div style="display: flex; justify-content: center;">
-                    <!-- coluna 1-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg"> </div>
-
-                    <!-- coluna 2-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg2"> </div>
-
-                    <!-- coluna 3-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg3"> </div>
-
-                    <!-- coluna 4-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg4"> </div>
-
-                    <!-- coluna 5-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg5"></div>
-
-                    <!-- coluna 6-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg6"> </div>
-
-                    <!-- coluna 7-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg7"></div>
-
-                    <!-- coluna 8-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg8"></div>
-
-                    <!-- coluna 9-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg9"></div>
-
-                    <!-- coluna 10-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg10"></div>
-
-                    <!-- coluna 11-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg11"></div>
-
-                    <!-- coluna 12-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg12"></div>
-
-                    <!-- coluna 13-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg13"></div>
-
-                    <!-- coluna 14-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg14"></div>
-
-                    <!-- coluna 15-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg15"></div>
-
-                    <!-- coluna 16-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg16"></div>
-
-                    <!-- coluna 17-->
-                    <div style="display: flex; flex-flow: column;" id="div_msg17"></div>
+                <div class="palavras_flex">
+                    <div class="flex2">
+                        <p class="t"> Caça-palavras </p>
+                        <button onclick="verificar()" class="botao_verificar">Verificar</button>
+                    </div>
+                    <div class="cacaPalavras">
+                        <div style="display: flex; justify-content: center;">
+                            <!-- coluna 1-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg"> </div>
+                            <!-- coluna 2-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg2"> </div>
+                            <!-- coluna 3-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg3"> </div>
+                            <!-- coluna 4-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg4"> </div>
+                            <!-- coluna 5-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg5"></div>
+                            <!-- coluna 6-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg6"> </div>
+                            <!-- coluna 7-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg7"></div>
+                            <!-- coluna 8-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg8"></div>
+                            <!-- coluna 9-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg9"></div>
+                            <!-- coluna 10-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg10"></div>
+                            <!-- coluna 11-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg11"></div>
+                            <!-- coluna 12-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg12"></div>
+                            <!-- coluna 13-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg13"></div>
+                            <!-- coluna 14-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg14"></div>
+                            <!-- coluna 15-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg15"></div>
+                            <!-- coluna 16-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg16"></div>
+                            <!-- coluna 17-->
+                            <div style="display: flex; flex-flow: column;" id="div_msg17"></div>
+                        </div>
+                    </div>
                 </div>
 
+                <div style="display: flex; justify-content: center;">
+                    <div class="encontradas" id="palavras_encontradas"></div>
+                </div>
             </div>
-            <button onclick="verificar()">Verificar</button>
-            <div class="nomes" id="palavras_encontradas"></div>
         </div>
 </body>
 <script>
+
     /* Criando as letras aleatorias */
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for (let index = 0; index < 16; index++) {
         /*ASTRONALTA*/
         if (index == 6) {
-              div_msg12.innerHTML += '<button class="letras a" onclick="selecao_astro_a1()"> A </button>';
-              
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_astro_a1()"> A </button>';
+
         }
         if (index == 8) {
-             div_msg8.innerHTML += '<button class="letras a" onclick="selecao_astro_o()"> O </button>';
+            div_msg8.innerHTML += '<button class="letras a" onclick="selecao_astro_o()"> O </button>';
         }
         if (index == 10) {
-          div_msg4.innerHTML += '<button class="letras a" onclick="selecao_astro_t2()"> T </button>';   
+            div_msg4.innerHTML += '<button class="letras a" onclick="selecao_astro_t2()"> T </button>';
             div_msg3.innerHTML += '<button class="letras a" onclick="selecao_astro_a3()"> A </button>';
         }
         if (index == 11) {
@@ -145,28 +140,28 @@
             div_msg7.innerHTML += '<button class="letras a" onclick="selecao_astro_n()"> N </button>';
         }
         if (index == 12) {
-          
-            
-          
+
+
+
             div_msg6.innerHTML += '<button class="letras a" onclick="selecao_astro_a2()"> A </button>';
-           
-           
-            
+
+
+
             div_msg10.innerHTML += '<button class="letras a" onclick="selecao_astro_t1()"> T </button>';
             div_msg11.innerHTML += '<button class="letras a" onclick="selecao_astro_s()"> S </button>';
-          
+
         }
         if (index == 13) {
-              div_msg5.innerHTML += '<button class="letras a" onclick="selecao_astro_u()"> U </button>';
+            div_msg5.innerHTML += '<button class="letras a" onclick="selecao_astro_u()"> U </button>';
         }
         /*PLANETAS*/
         if (index == 4) {
             div_msg15.innerHTML += '<button class="letras a" onclick="selecao_planetas_a2()"> A </button>';
         }
         if (index == 5) {
-             div_msg12.innerHTML += '<button class="letras a" onclick="selecao_planetas_n()"> N </button>';
+            div_msg12.innerHTML += '<button class="letras a" onclick="selecao_planetas_n()"> N </button>';
         }
-        if (index == 10 ) {
+        if (index == 10) {
             div_msg9.innerHTML += '<button class="letras a" onclick="selecao_planetas_p()"> P </button>';
         }
         if (index == 11) {
@@ -178,7 +173,7 @@
         }
         if (index == 14) {
             div_msg14.innerHTML += '<button class="letras a" onclick="selecao_planetas_t()"> T </button>';
-             div_msg16.innerHTML += '<button class="letras a" onclick="selecao_planetas_s()"> S </button>';
+            div_msg16.innerHTML += '<button class="letras a" onclick="selecao_planetas_s()"> S </button>';
         }
         /*ESTRELAS*/
         if (index == 5) {
@@ -365,112 +360,112 @@
         var numero = Math.floor(Math.random() * 26);
         var letra = alfabeto[numero];
         /* coluna 1*/
-        if (index <15) {
-             div_msg.innerHTML += '<button class="letras">' + letra + '</button> ';
+        if (index < 15) {
+            div_msg.innerHTML += '<button class="letras">' + letra + '</button> ';
         }
         if (index < 8) {
-              /*coluna 8*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg8.innerHTML += '<button class="letras">' + letra + '</button> ';
+            /*coluna 8*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg8.innerHTML += '<button class="letras">' + letra + '</button> ';
         }
-       if (index < 9) {
-         /*coluna 2*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg2.innerHTML += '<button class="letras">' + letra + '</button> ';
+        if (index < 9) {
+            /*coluna 2*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg2.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-       }
+        }
 
-       if (index < 10) {
-        /*coluna 3*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg3.innerHTML += '<button class="letras">' + letra + '</button> ';
+        if (index < 10) {
+            /*coluna 3*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg3.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-           /*coluna 4*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg4.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-            
-       }
-       if (index < 11) {
-          /*coluna 7*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg7.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 9*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg9.innerHTML += '<button class="letras">' + letra + '</button> ';
-       }
-       if (index < 12) {
-        /*coluna 6*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg6.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-         /*coluna 10*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg10.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 11*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg11.innerHTML += '<button class="letras">' + letra + '</button> ';
-       }
-       if (index < 13) {
-      /*coluna 5*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg5.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-      
-       }
-       if (index < 14) {
-         /*coluna 13*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg13.innerHTML += '<button class="letras">' + letra + '</button> ';
-       }
-       if (index < 6) {
-         /*coluna 12*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg12.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-        /*coluna 15*/
-        numero = Math.floor(Math.random() * 26);
-        letra = alfabeto[numero];
-        div_msg15.innerHTML += '<button class="letras">' + letra + '</button> ';
-       }
-
-       
-
-       
-
-       
+            /*coluna 4*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg4.innerHTML += '<button class="letras">' + letra + '</button> ';
 
 
-        
+        }
+        if (index < 11) {
+            /*coluna 7*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg7.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-       
+            /*coluna 9*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg9.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+        if (index < 12) {
+            /*coluna 6*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg6.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        
+            /*coluna 10*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg10.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        
+            /*coluna 11*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg11.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+        if (index < 13) {
+            /*coluna 5*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg5.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-       
+
+        }
+        if (index < 14) {
+            /*coluna 13*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg13.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+        if (index < 6) {
+            /*coluna 12*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg12.innerHTML += '<button class="letras">' + letra + '</button> ';
+
+            /*coluna 15*/
+            numero = Math.floor(Math.random() * 26);
+            letra = alfabeto[numero];
+            div_msg15.innerHTML += '<button class="letras">' + letra + '</button> ';
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         /*coluna 14*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg14.innerHTML += '<button class="letras">' + letra + '</button> ';
 
-        
+
 
         /*coluna 16*/
         numero = Math.floor(Math.random() * 26);
