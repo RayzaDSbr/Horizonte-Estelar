@@ -29,14 +29,13 @@
 
 <!-- <body onload=" atualizarFeed()"> -->
 
-<body>
-
+<body onload="esconder()">
     <div class="janela">
         <div class="header-left">
             <h1>Horizonte Estelar</h1>
 
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h3>Olá, <span id="b_usuario"> </span>!</h3>
             </div>
 
             <div class="btn-nav-white">
@@ -64,7 +63,10 @@
         </div>
 
         <div class="dash">
-            <div style="display: flex; justify-content: flex-start;">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button id="iniciar_game" class="botao_iniciar" onclick="iniciar()">Iniciar</button>
+            </div>
+            <div id="caca_palavras" style="display: flex; justify-content: flex-start;">
 
                 <div class="palavras_flex">
                     <div class="flex2">
@@ -119,6 +121,17 @@
 </body>
 <script>
 
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    function esconder() {
+        document.getElementById('caca_palavras').style.display = "none";
+        document.getElementById('iniciar_game').style.display = "flex";
+    }
+
+    function iniciar() {
+        document.getElementById('caca_palavras').style.display = "flex";
+        document.getElementById('iniciar_game').style.display = "none";
+    }
     /* Criando as letras aleatorias */
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

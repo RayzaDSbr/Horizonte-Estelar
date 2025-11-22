@@ -91,3 +91,27 @@ button.letras.a:focus{
   background-color: #431259;
   transform: scale(1.03);
 }
+
+.botao_iniciar {
+  text-align: center;
+  width: 110px;
+  padding: 15px;
+  margin: 10px;
+  margin-top: 25%;
+  border-radius: 10px;
+  border: white solid 1px ;
+  background-color: #083c5f;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+ 
+}
+
+.botao_iniciar:hover {
+  background-color: #431259;
+  transform: scale(1.5);
+  box-shadow: 0 0 5px #58b9ff, 0 0 10px #5890ff, 0 0 20px #58e0ff, 0 0 40px #5885ff;;
+}

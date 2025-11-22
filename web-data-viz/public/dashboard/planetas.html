@@ -37,7 +37,7 @@
             </a>
 
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h3>Olá, <span id="b_usuario"> </span>!</h3>
             </div>
 
             <div class="btn-nav-white">
@@ -396,6 +396,9 @@
 
 </html>
 <script>
+    
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     function mostrarPlaneta(idCaixa) {
         const caixas = document.querySelectorAll('.caixa_planetas');
 
