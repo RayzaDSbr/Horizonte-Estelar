@@ -1,7 +1,7 @@
 # 🌌 Horizonte Estelar  
 ### Um site interativo sobre o Sistema Solar com jogo de caça-palavras e dashboard de desempenho
 
-![Logo Horizonte Estelar](/web-data-viz/public/css/img/logo_preta.png)
+![Logo Horizonte Estelar](/web-data-viz/public/css/img/logo_preta.png);
 
 O **Horizonte Estelar** é um projeto desenvolvido com o objetivo de aproximar o usuário do universo do espaço por meio de curiosidades, imagens, um jogo interativo e uma dashboard com indicadores de desempenho.  
 Criado utilizando **HTML, CSS e JavaScript**, o sistema integra a **API Web-Data-Viz** para comunicação com o banco de dados, permitindo **cadastro, login, registro de pontuação e visualização de métricas**.
@@ -71,4 +71,4 @@ Cativar o usuário com conteúdo acessível, visualmente agradável e interativo
 
 Projeto individual | SPTech
 
-![Logo SpTech](/web-data-viz/public/css/img/logo_sptech.png)
+![Logo SpTech](/web-data-viz/public/css/img/logo_sptech.png);
