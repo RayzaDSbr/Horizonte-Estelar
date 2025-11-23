@@ -27,7 +27,6 @@
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- <body onload=" atualizarFeed()"> -->
 
 <body onload="esconder()">
     <div class="janela">
@@ -72,6 +71,7 @@
                     <div class="flex2">
                         <p class="t"> Caça-palavras </p>
                         <button onclick="verificar()" class="botao_verificar">Verificar</button>
+                        <button onclick="terminar()" class="botao_verificar">Terminar</button>
                     </div>
                     <div class="cacaPalavras">
                         <div style="display: flex; justify-content: center;">
@@ -138,11 +138,45 @@
         document.getElementById('caca_palavras').style.display = "flex";
         document.getElementById('iniciar_game').style.display = "none";
 
-        contador_partidas += 1;
+    }
+    function terminar() {
 
-        valor_para_armazenar = contador_partidas.toString();
-        sessionStorage.setItem('partidasJogadas', valor_para_armazenar);
+        var cont_partidas = 1;
 
+        fetch("/palavras/cad_partidas", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                qtd_partidas: cont_partidas
+            }),
+        })
+            .then(function (resposta) {
+                console.log("Resposta da API:", resposta);
+
+                if (resposta.ok) {
+                    console.log('Foi graças a Deus pai');
+
+                    window.location = "graficos.html";
+
+                } else {
+                    resposta.json().then(json => {
+                        console.log('n foi f');
+                    }).catch(erro => {
+                        console.log('n foi f');
+                    });
+                    throw new Error("Erro");
+                }
+            })
+            .catch(function (erro) {
+                console.error(`#ERRO: ${erro}`);
+            });
+
+        return false;
+
+
+        
     }
     /* Criando as letras aleatorias */
     var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -165,13 +199,7 @@
             div_msg7.innerHTML += '<button class="letras a" onclick="selecao_astro_n()"> N </button>';
         }
         if (index == 12) {
-
-
-
             div_msg6.innerHTML += '<button class="letras a" onclick="selecao_astro_a2()"> A </button>';
-
-
-
             div_msg10.innerHTML += '<button class="letras a" onclick="selecao_astro_t1()"> T </button>';
             div_msg11.innerHTML += '<button class="letras a" onclick="selecao_astro_s()"> S </button>';
 
@@ -191,7 +219,7 @@
         }
         if (index == 11) {
             div_msg10.innerHTML += '<button class="letras a" onclick="selecao_planetas_l()"> L </button>';
-            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_planetas_a1()"> A </button>';
+            div_msg11.innerHTML += '<button class="letras a" onclick="selecao_planetas_a()"> A </button>';
         }
         if (index == 12) {
             div_msg13.innerHTML += '<button class="letras a" onclick="selecao_planetas_e()"> E </button>';
@@ -468,29 +496,10 @@
             div_msg15.innerHTML += '<button class="letras">' + letra + '</button> ';
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /*coluna 14*/
         numero = Math.floor(Math.random() * 26);
         letra = alfabeto[numero];
         div_msg14.innerHTML += '<button class="letras">' + letra + '</button> ';
-
-
 
         /*coluna 16*/
         numero = Math.floor(Math.random() * 26);
@@ -503,13 +512,7 @@
             letra = alfabeto[numero];
             div_msg17.innerHTML += '<button class="letras">' + letra + '</button> ';
         }
-
-
-
-
     }
-
-
 
     //palavra lua
     var lua = ['l', 'u', 'a'];
@@ -753,6 +756,38 @@
 
         if (selecionado2 == true) {
             palavras_encontradas.innerHTML += '<br> Galaxia';
+
+            fk_galaxia = 2;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_galaxia
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Terra
@@ -765,6 +800,38 @@
         }
         if (selecionado_terra == true) {
             palavras_encontradas.innerHTML += '<br> terra';
+
+            fk_terra = 4;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_terra
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Sol
@@ -777,6 +844,38 @@
         }
         if (selecionado_sol == true) {
             palavras_encontradas.innerHTML += '<br> sol';
+
+            fk_sol = 5;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_sol
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Marte
@@ -789,6 +888,38 @@
         }
         if (selecionado_marte == true) {
             palavras_encontradas.innerHTML += '<br> marte';
+
+            fk_marte = 6;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_marte
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Saturno
@@ -801,6 +932,38 @@
         }
         if (selecionado_saturno == true) {
             palavras_encontradas.innerHTML += '<br> saturno';
+
+            fk_saturno = 3;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_saturno
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Estrelas
@@ -813,6 +976,38 @@
         }
         if (selecionado_estrelas == true) {
             palavras_encontradas.innerHTML += '<br> estrelas';
+
+            fk_estrelas = 8;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_estrelas
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Cometas
@@ -825,6 +1020,38 @@
         }
         if (selecionado_cometas == true) {
             palavras_encontradas.innerHTML += '<br> cometas';
+
+            fk_cometas = 9;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_cometas
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Constalação
@@ -837,6 +1064,38 @@
         }
         if (selecionado_const == true) {
             palavras_encontradas.innerHTML += '<br> constelacao';
+
+            fk_constelacao = 10;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_constelacao
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Astronalta
@@ -849,6 +1108,38 @@
         }
         if (selecionado_astro == true) {
             palavras_encontradas.innerHTML += '<br> astronauta';
+
+            fk_astronauta = 11;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_astronauta
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Universo
@@ -861,6 +1152,38 @@
         }
         if (selecionado_universo == true) {
             palavras_encontradas.innerHTML += '<br> universo';
+
+            fk_universo = 12;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_universo
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Gravidade
@@ -873,6 +1196,38 @@
         }
         if (selecionado_grav == true) {
             palavras_encontradas.innerHTML += '<br> gravidade';
+
+            fk_gravidade = 13;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_gravidade
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Telescopio
@@ -885,6 +1240,38 @@
         }
         if (selecionado_tel == true) {
             palavras_encontradas.innerHTML += '<br> telescopio';
+
+            fk_telescopio = 14;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_telescopio
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
 
         //Nasa
@@ -944,6 +1331,38 @@
 
         if (selecionado_planetas == true) {
             palavras_encontradas.innerHTML += '<br> Planetas';
+
+            fk_planetas = 7;
+
+            fetch("/palavras/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    palavras_encontradas: fk_planetas
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+
+                    if (resposta.ok) {
+                        console.log('Foi graças a Deus pai');
+
+                    } else {
+                        resposta.json().then(json => {
+                            console.log('n foi f');
+                        }).catch(erro => {
+                            console.log('n foi f');
+                        });
+                        throw new Error("Erro");
+                    }
+                })
+                .catch(function (erro) {
+                    console.error(`#ERRO: ${erro}`);
+                });
+
+            return false;
         }
     }
 </script>

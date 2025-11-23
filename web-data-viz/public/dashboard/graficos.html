@@ -72,13 +72,15 @@
             <div class="graficos_flex">
 
                 <div class="caixa_graficos indicador2">
+                    <div class="kpi_titulo"> Desempenho: </div>
+                    <img class="icones_graficos" src="./../css/img/foguete.png" alt="Imagem de foguete">
                     <div id="msg2" class="titulo"></div>
                 </div>
 
                 <div class="caixa_graficos indicador2">
                     <div class="titulo"> Quantidade de partidas: </div>
                     <div id="kpi_partidas" class="titulo" ></div>
-                    <div id="msg" class="titulo"> </div>
+                    <!--<div id="msg" class="titulo"> </div>-->
                 </div>
 
             </div>
@@ -95,8 +97,6 @@
     
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
- 
-     kpi_partidas.innerHTML = sessionStorage.getItem('partidasJogadas');
     function obterDados() {
         fetch('/palavras/listar')
             .then(function (response) {
@@ -107,15 +107,36 @@
             })
             .catch(function (err) {
                 console.log(err);
-            })
+            });
 
+            fetch('/palavras/listar_partidas')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                plotar_kpi_partida(data);
+            })
+            .catch(function (err) {
+                console.log(err);
+            })    
 
         // plotarGraficoPizza(dados); 
     }
 
 
     var palavras_econtradas_pizza = [];
+    var qtd_de_partidas = [];
 
+    function plotar_kpi_partida(infos) {
+
+        qtd_de_partidas = [];
+
+        for (let index = 0; index < infos.length; index++) {
+            qtd_de_partidas.push(infos[index]);
+        }
+
+        kpi_partidas.innerHTML = qtd_de_partidas[0].total_quantidade;
+    }
 
     function plotarGraficoPizza(dados) {
 
@@ -129,9 +150,9 @@
 
         var desempenho = (palavras_econtradas_pizza[0].total_partidas / 15) * 100
 
-        msg.innerHTML = palavras_econtradas_pizza[0].total_partidas;
+        //msg.innerHTML = palavras_econtradas_pizza[0].total_partidas;
         msg2.innerHTML = desempenho.toFixed(0) + '%';
-        //Calculos
+       
 
         var palavras_escondidas = 15 - palavras_econtradas_pizza[0].total_partidas;
 
@@ -145,12 +166,10 @@
                     label: 'Palavras',
                     data: [palavras_escondidas, palavras_econtradas_pizza[0].total_partidas, 15],
                     backgroundColor: [
-                        '#ffff',
+                        '#6CE5E8','#41B8D5','#2D8BBA',
                     ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                    ],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    borderRadius: 10
                 }]
             },
         });

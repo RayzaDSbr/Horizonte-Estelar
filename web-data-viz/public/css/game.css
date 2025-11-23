@@ -59,17 +59,12 @@ button.letras:focus{
     transform: scale(1.03);
 }
 button.letras.a {
-  background: #431259;
+  background: #010102;
 } 
 
 button.letras.a:focus{
     background-color: #0fc035;
     transform: scale(1.03);
-}
-.marcada {
-  background: #4ea4ff;
-  color: #000;
-  font-weight: bold;
 }
 
 .botao_verificar {

@@ -27,14 +27,14 @@
 }
 
 .caixa_graficos.indicador1 {
-  width: 900px;
-  height: 200px;
+  max-width: 900px;
+
 
 }
 
 .caixa_graficos.indicador2 {
   width: 573px;
-  height: 100px;
+  height: 45px;
 
 }
 
@@ -60,7 +60,15 @@
   height: 126px;
 
 }
-
+.kpi_titulo{
+  font-size: 20px;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 200;
+}
+.icones_graficos{
+  width: 25px;
+}
 /* ---------------------- FIM GRAFICOS DASHBOARD OFICIAL -----------------*/
 /* ---------------------- DASHBOARD INICIAL -----------------*/
 p.boasVindas {
