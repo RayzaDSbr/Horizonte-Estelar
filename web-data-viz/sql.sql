@@ -96,7 +96,9 @@ qtd_partidas int
 
 select * from registros_totais;
 
-select count(qtd_partidas) from registros_totais;
+
+
+        select count(qtd_partidas) AS total_quantidade from registros_totais;
 
 create table palavras(
 idPalavra int primary key auto_increment,

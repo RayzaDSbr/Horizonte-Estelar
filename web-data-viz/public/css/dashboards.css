@@ -8,47 +8,48 @@
   text-align: center;
   color: white;
   font-family: "Urbanist", sans-serif;
-  margin: 0px;
+  margin: 10px;
 }
 
 .graficos_flex {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .caixa_graficos {
   border-radius: 10px;
   border: 0.5px solid #FFF9F9;
   padding: 30px;
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 7px 8px 0px #30373e;
-  margin: 10px 31px;
+  margin: 10px 20px;
 }
 
 .caixa_graficos.indicador1 {
-  max-width: 900px;
+  width: 600px;
+  height: 300px;
 }
 
 .caixa_graficos.indicador2 {
-  width: 573px;
+  width: 250px;
   height: 45px;
   background-color: rgba(0, 0, 0, 0.685);
-  display: flex;
-  justify-content: flex-start;
+ 
 }
 .kpi_dado{
-  font-size: 30px;
+  font-size: 20px;
   color: #dfdfdf;
   font-family: "Urbanist", sans-serif;
   font-weight: 600;
 }
 .kpi_titulo{
-  font-size: 25px;
+  font-size: 15px;
   color: #FDBF00;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  margin: 10px 40px 10px 5px;
+  margin: 10px 20px 10px 5px;
 }
 
 .kpi_titulo.b{
