@@ -238,6 +238,13 @@ footer{
 
 
 /* --------------------------- LOGIN --------------------------------*/
+.erros_login{
+  color: aliceblue;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 10px;
+}
 
 .msg {
   font-family: "Urbanist", sans-serif;

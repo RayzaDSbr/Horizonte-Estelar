@@ -59,7 +59,7 @@ button.letras:focus{
     transform: scale(1.03);
 }
 button.letras.a {
-  background: #010102;
+  background: #431259;;
 } 
 
 button.letras.a:focus{
